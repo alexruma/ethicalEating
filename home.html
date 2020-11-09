@@ -1,0 +1,71 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+    <div id=" sidebar">
+
+        <div id="header">
+            <!--Need to specify link for POST request-->
+            <form action=" = " /login.html" method="POST">
+                <fieldset>
+                    <legend>LOGIN</legend>
+                    <fieldset>
+                        <label>
+                            Username:
+                            <input type="text" name="username" size="30" maxlength="100">
+                        </label>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <label>
+                            Password:
+                            <input type="text" name="password" size="30" maxlength="100">
+                        </label>
+                    </fieldset>
+                    <br />
+                    <input type="submit" value="Submit" />
+                </fieldset>
+            </form>
+
+            <b><a href="home.html">Home</a></b>
+            <br />
+            <b><a href="createrecipe.html">Create Recipe</a></b>
+            <br />
+            <b><a href="mealsearch.html">Meal Search</a></b>
+            <br />
+            <b><a href="lucky.html">I'm feeling LUCKY!</a></b>
+            <br />
+        </div>
+    </div>
+</head>
+<br />
+
+<!-- Containers for each meal -->
+<body>
+    <div class="container">
+        <div class="grid-1 callout primary">
+            Breakfast
+        </div>
+
+        <div class="grid-2 callout warning">
+            Lunch
+        </div>
+
+        <div class="grid-3 callout alert">
+            Dinner
+        </div>
+
+        <div class="grid-4 callout success">
+            Dessert
+        </div>
+    </div>
+</body>
+
+
+</html>

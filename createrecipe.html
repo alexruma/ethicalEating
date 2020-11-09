@@ -1,0 +1,57 @@
+﻿
+<!DOCTYPE html>
+<html>
+<div id=" sidebar">
+    <head>
+        <meta charset="UTF-8">
+        <title>Create Recipe</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+        <div id="header">
+            <b><a href="home.html">Home</a></b>
+            <br />
+            <b><a href="createrecipe.html">Create Recipe</a></b>
+            <br />
+            <b><a href="mealsearch.html">Meal Search</a></b>
+            <br />
+            <b><a href="lucky.html">I'm feeling LUCKY!</a></b>
+            <br />
+        </div>
+    </head>
+</div>
+
+<div id=" general">
+    <center>
+        <body>
+            <!--Creating Recipe brings us to a new page, new page yet to be specified (local or hosted tbd); -->
+            <form action= "create-recipe.html" method="POST">
+                <fieldset>
+                    <fieldset>
+                        <label>
+                            Name Your Recipe:
+                            <input type="text" name="recipename" size="30" maxlength="100">
+                        </label>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <label>
+                            Ingredient 1:
+                            <input type="text" name="ing_1" size="30" maxlength="100">
+                        </label>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <label>
+                            Ingredient 2:
+                            <input type="text" name="ing_2" size="30" maxlength="100">
+                        </label>
+                    </fieldset>
+                    <br />
+                    <input type="submit" value="Done" />
+                </fieldset>
+            </form>
+
+        </body>
+    </center>
+</div>
+</html>
