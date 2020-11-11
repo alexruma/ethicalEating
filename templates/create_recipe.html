@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="subheader">Create Your Own Recipe</h1>
+<form action="/new_recipe" method="POST" class="mainbody">
+    <table>
+        {% for key, value in data.items() %}
+            <tr>
+                <td>
+                    <input type ="checkbox" name="checkbox" value="{{ key }}"> {{ value }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <p>Recipe Name: <input type ="text" name="recipe_name" required></p>
+    <p><input type ="submit" value="Create Meal"></p>
+</form>
+
+
+{% endblock %}

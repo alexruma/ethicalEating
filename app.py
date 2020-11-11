@@ -1,41 +1,38 @@
 from flask import Flask, render_template, request, redirect, url_for
-from dictionary_parser import gather_full_ingredient_list
+from dictionary_parser import gather_full_ingredient_list, gather_ingredient_by_key
 app = Flask(__name__)
-
 
 # Render homepage/index
 @app.route('/')
 def index():
     return render_template('index.html')
 
-# Render meal-search
-@app.route('/meal_search')
-def meal_search():
-    return render_template('meal-search.html')
+# Render recipe-search
+@app.route('/recipe_search')
+def recipe_search():
+    return render_template('recipe_search.html')
 
 
 # Render create-recipe
 @app.route('/create_recipe', methods=["GET", "POST"])
 def create_recipe():
-    ingredient_list = gather_full_ingredient_list()
+    full_ingredient_list = gather_full_ingredient_list()
 
-    if request.method == "POST":
-        # Contains name entered in form name input.
-        recipe_name = request.form["recipe_name"]
-        
-        # Populate list of checked ingredients
-        ingredient_list = []
-        for key in request.form:
-            if request.form[key]:
-                ingredient_list.append(request.form[key])
+    return render_template('create_recipe.html', data=full_ingredient_list)
 
-        return redirect(url_for("new_recipe", new_recipe_name = recipe_name, ingredients = ingredient_list))
-    return render_template('create-recipe.html', data=ingredient_list)
+# new_recipe function from create_recipe page which renders ingredient list page
+@app.route("/new_recipe", methods=["POST"])
+def new_recipe():
+    recipe_name = request.form["recipe_name"]
+    ingredient_list = request.form.getlist('checkbox')
+    ingredients_dict = {}
 
-# Render page with user created recipe
-@app.route("/<new_recipe_name>/<ingredients>")
-def new_recipe(new_recipe_name, ingredients):
-    return render_template('new_recipe.html', recipe_name = new_recipe_name, recipe_ingredients = ingredients)
+    for key in ingredient_list:
+        print(key)
+        ingredients_dict.update(gather_ingredient_by_key(key))
+
+    return render_template('ingredients.html', recipe_name=recipe_name, data=ingredients_dict)
+
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(debug=True)

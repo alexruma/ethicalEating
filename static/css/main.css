@@ -1,12 +1,14 @@
-.sidenav {
-    width: 200px;
+
+/*Sidebar CSS - Base Template*/
+.sidebar {
+    width: 230px;
     position: fixed;
     z-index: 1;
     background: grey;
     overflow-x: hidden;
     padding: 8px 0;
 }
-.sidenav a {
+.sidebar a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
@@ -14,10 +16,22 @@
     display: block;
 }
 
-.sidenav a:hover {
+.sidebar a:hover {
     color: white;
 }
-.header {
+
+/*Sidebar CSS - Username/Password Template*/
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/*Top of page CSS - Base Template*/
+.mainheader {
     outline: none;
     text-align:center;
     font-family:'Arvo', serif;
@@ -28,18 +42,130 @@
     background-color: rgba(0,79,113,1);
 }
 
-.mainheader {
-    margin-left: 215px; /* sidebar width is 200 so I added 15 to give some whitespace */
+/*Generic CSS for interior of the pages*/
+.subheader {
+    margin-left: 245px; /* sidebar width is 200 so I added 15 to give some whitespace */
     font-size: 28px;
     padding: 0px 10px;
 }
 
 .mainbody {
-    margin-left: 215px; /* sidebar width is 200 so I added 15 to give some whitespace */
+    margin-left: 245px; /* sidebar width is 200 so I added 15 to give some whitespace */
     font-size: 14px
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+/*Index/Home page CSS - Categories*/
+
+.container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (1fr)[2];
+    grid-template-rows: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+    width: 75vw;
+    height: 75vh;
+
+    margin-left: 245px; /* sidebar width is 200 so I added 15 to give some whitespace */
+    padding: 0px 10px;
+}
+
+@media screen and (max-width: 60em) {
+    .container {
+        -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+.grid-1 {
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    background:orange;
+    font-family: "Garamond";
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width: 60em) {
+    .grid-1 {
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        -ms-grid-row: 1;
+        grid-row: 1;
+    }
+}
+
+.grid-2 {
+    -ms-grid-column: 3;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    background:purple;
+    font-family: "Garamond";
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width: 60em) {
+    .grid-2 {
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        -ms-grid-row: 2;
+        grid-row: 2;
+
+    }
+}
+
+.grid-3 {
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    background:red;
+    font-family: "Garamond";
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width: 60em) {
+    .grid-3 {
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        -ms-grid-row: 3;
+        grid-row: 3;
+    }
+}
+
+.grid-4 {
+    -ms-grid-column: 3;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    background:green;
+    font-family: "Garamond";
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width: 60em) {
+    .grid-4 {
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        -ms-grid-row: 4;
+        grid-row: 4;
+    }
+}
+
+.callout {
+    margin: 0;
 }

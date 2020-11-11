@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="subheader">Search for Meal</h1>
+<form action="recipe_search.html" method="POST" class="mainbody">
+    <fieldset>
+        <fieldset>
+            <label>Type in a meal you would like to search for:</label>
+            <input type="text" placeholder="Name of Meal" name="recipename" required>
+        </fieldset>
+        <input type="submit" value="Search"/>
+    </fieldset>
+</form>
+
+{% endblock %}

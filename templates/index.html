@@ -1,1 +1,21 @@
 {% extends "base.html" %}
+
+{% block content %}
+<body>
+    <div class="container">
+        <a class="grid-1 callout primary" href="/list_of_recipes.html">
+            <div>Breakfast</div>
+        </a>
+        <a class="grid-2 callout warning" href="/list_of_recipes.html">
+            <div>Lunch</div>
+        </a>
+        <a class="grid-3 callout alert" href="/list_of_recipes.html">
+            <div>Dinner</div>
+        </a>
+        <a class="grid-4 callout success" href="/list_of_recipes.html">
+            <div>Dessert</div>
+        </a>
+    </div>
+</body>
+
+{% endblock %}

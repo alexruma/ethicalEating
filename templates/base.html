@@ -9,17 +9,35 @@
     <script></script>
 </head>
 <body>
-    <header class="header">
+    <header class="mainheader">
         <div>
             <h1 class=logo">Ethical Eating App</h1>
         </div>
     </header>
-    <div class="sidenav">
+    <div class="sidebar">
+
+        <!--Need to specify link for POST request-->
+        <form action= "/login.html" method="POST">
+            <fieldset>
+                <legend>LOGIN</legend>
+                <fieldset>
+                    <label>Username:</label>
+                        <input type="text" placeholder="Enter Username" name="username" required>
+                </fieldset>
+                <br />
+                <fieldset>
+                    <label>Password:</label>
+                        <input type="password" placeholder="Enter Password" name="password" required>
+                </fieldset>
+                <br />
+                <input type="submit" value="Submit" />
+            </fieldset>
+        </form>
         <a href="/">Home</a>
-        <a href="/meal_search">Meal Search</a>
+        <a href="/recipe_search">Recipe Search</a>
         <a href="/create_recipe">Create Recipe</a>
+        <a href="lucky.html">I'm Feeling Lucky!</a>
     </div>
-    <div class="container">
         {% block content %}
         {% endblock %}
     </div>
