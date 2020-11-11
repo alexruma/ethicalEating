@@ -1,17 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Create Your Own Recipe</h1>
-<form action="/create_recipe" method="POST">
-    <p>Wheat Bread <input type ="checkbox" name="wheat_bread"  label = "Wheat Bread" value = "Wheat Bread"></p>
-    <p>White Bread <input type ="checkbox" name="white_bread"  label = "White Bread" value = "White Bread"></p>
-    <p>Lettuce <input type ="checkbox" name="lettuce"  label = "Lettuce" value = "Lettuce"></p>
-    <p>White Onion <input type ="checkbox" name="white_onion"  label = "White Onion" value = "White Onion"></p>
-    <p>Cheddar Cheese <input type ="checkbox" name="Cheddar_Cheese"  value = "Cheddar Cheese"></p>
-    <p>Swiss Cheese <input type ="checkbox" name="Swiss_Cheese"  value = "Swiss Cheese"></p>
-    <p>Turkey <input type ="checkbox" name="turkey"  value = "Turkey"></p>
-
+<h1 class="mainheader">Create Your Own Recipe</h1>
+<form action="/create_recipe" method="POST" class="mainbody">
+    {% for key, value in data.items() %}
+        <p> {{ value }} <input type ="checkbox" name="checkbox" value="{{ key }}"></p>
+    {% endfor %}
+    
     <p>Recipe Name: <input type ="text" name="recipe_name"></p>
     <p><input type ="submit" value="Create Meal"></p>
 </form>
+
+
 {% endblock %}

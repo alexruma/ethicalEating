@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
+from dictionary_parser import gather_full_ingredient_list
 app = Flask(__name__)
 
 
@@ -16,19 +17,20 @@ def meal_search():
 # Render create-recipe
 @app.route('/create_recipe', methods=["GET", "POST"])
 def create_recipe():
+    ingredient_list = gather_full_ingredient_list()
+
     if request.method == "POST":
-        
         # Contains name entered in form name input.
         recipe_name = request.form["recipe_name"]
         
-        # Populate list of checked ingrednients
-        ingredient_list =[]
+        # Populate list of checked ingredients
+        ingredient_list = []
         for key in request.form:
             if request.form[key]:
                 ingredient_list.append(request.form[key])
 
         return redirect(url_for("new_recipe", new_recipe_name = recipe_name, ingredients = ingredient_list))
-    return render_template('create-recipe.html')
+    return render_template('create-recipe.html', data=ingredient_list)
 
 # Render page with user created recipe
 @app.route("/<new_recipe_name>/<ingredients>")

@@ -97,13 +97,13 @@ def gather_full_ingredient_list():
     """
 
     ingredient_path = os.path.join(os.path.dirname(__file__), 'resources', 'ingredients.json')
-    list_of_ingredients = []
+    dict_of_ingredients = {}
 
     # grab ingredients JSON to read
     json = JSONHandler(ingredient_path)
     json_dict = json.read_json()
 
     for key, value in json_dict.items():
-        list_of_ingredients.append([[key], json_dict[key]["Display Name"]])
+        dict_of_ingredients.update({key: json_dict[key]["Display Name"]})
 
-    return list_of_ingredients
+    return dict_of_ingredients
