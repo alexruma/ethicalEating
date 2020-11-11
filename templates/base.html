@@ -5,18 +5,25 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Ethical Eating</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href=''>
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/main.css') }}">
     <script></script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/meal_search">Meal Search</a></li>
-            <li><a href="/create_recipe">Create Recipe</a></li>
-        </ul>
-    </nav>  
-    {% block content %}{% endblock %}
+    <header class="header">
+        <div>
+            <h1 class=logo">Ethical Eating App</h1>
+        </div>
+    </header>
+    <div class="sidenav">
+        <a href="/">Home</a>
+        <a href="/meal_search">Meal Search</a>
+        <a href="/create_recipe">Create Recipe</a>
+    </div>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
 </body>
+
 </html>
 

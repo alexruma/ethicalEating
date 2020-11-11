@@ -1,0 +1,45 @@
+.sidenav {
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    background: grey;
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: white;
+}
+.header {
+    outline: none;
+    text-align:center;
+    font-family:'Arvo', serif;
+    color:white;
+    font-size:24px;
+    height:5%;
+    width:100%;
+    background-color: rgba(0,79,113,1);
+}
+
+.mainheader {
+    margin-left: 215px; /* sidebar width is 200 so I added 15 to give some whitespace */
+    font-size: 28px;
+    padding: 0px 10px;
+}
+
+.mainbody {
+    margin-left: 215px; /* sidebar width is 200 so I added 15 to give some whitespace */
+    font-size: 14px
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
