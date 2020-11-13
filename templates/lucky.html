@@ -1,24 +1,6 @@
-﻿
-<!DOCTYPE html>
-<html>
-<div id=" sidebar">
-    <head>
-        <meta charset="UTF-8">
-        <title>Lucky</title>
-        <link rel="stylesheet" href="style.css" type="text/css">
-        <div id="header">
-            <b><a href="home.html">Home</a></b>
-            <br />
-            <b><a href="createrecipe.html">Create Recipe</a></b>
-            <br />
-            <b><a href="mealsearch.html">Meal Search</a></b>
-            <br />
-            <b><a href="lucky.html">I'm feeling LUCKY!</a></b>
-            <br />
-        </div>
-    </head>
-</div>
+﻿{% extends "base.html" %}
 
+{% block content %}
 <div id=" general">
     <center>
         <body>
@@ -42,4 +24,4 @@
         </body>
     </center>
 </div>
-</html>
+{% endblock %}

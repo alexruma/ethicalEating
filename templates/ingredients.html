@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="subheader">Recipe for {{ recipe_name }}</h1>
+
+<table class="mainbody">
+    {% for key, value in data.items() %}
+        <tr>
+            <td>
+                {{ value }}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

@@ -54,6 +54,20 @@ def gather_meals_by_search(search: str):
     return return_list
 
 
+def gather_ingredient_by_key(key: str):
+    ingredient_path = os.path.join(os.path.dirname(__file__), 'resources', 'ingredients.json')
+
+    print(key)
+
+    # grab ingredients JSON to read and then parse for ingredients in recipe
+    ingredient_json = JSONHandler(ingredient_path)
+    ingredient_json_dict = ingredient_json.read_json()
+
+    ingredient = {key: ingredient_json_dict[key]["Display Name"]}
+
+    return ingredient
+
+
 def gather_ingredients_by_meal(meal: str):
     """
     Function to use for action where a meal has been selected and we need to gather a list of all the ingredients in the
@@ -90,10 +104,8 @@ def gather_full_ingredient_list():
     """
     Function to return full list of ingredients specifically for the create recipe page.
 
-    :return: list of pairs that contain key, Display Name for all ingredients in the recipe. i.e.:
-    [[milk, Milk],
-    [sugar, White Sugar],
-    [redPepper, Red Pepper]]
+    :return: dict that contains key and Display Name for all ingredients in the recipe. i.e.:
+    {"donut": "Donut", "veggieOmelet": "Veggie Omelet", "huevoRanchero": "Huevo Ranchero"}
     """
 
     ingredient_path = os.path.join(os.path.dirname(__file__), 'resources', 'ingredients.json')
