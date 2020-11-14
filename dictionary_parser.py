@@ -26,6 +26,29 @@ def gather_meals_by_category(category: str):
 
     return return_list
 
+def gather_meals_dict_by_category(category: str):
+    """
+    Same function as gather_meals_by_category but returns dict rather than string.
+    When clicking on a category (breakfast, lunch, dinner, or dessert), we parse the entire meals.json for any meals
+    with the appropriate category flag.
+
+    :return: dict of pairs containing key and Display Name for the meals found. i.e.:
+     [[donut, Donut],
+     [veggieOmelet, Veggie Omelet],
+     [huevoRanchero, Huevo Ranchero]]
+    """
+
+    path = os.path.join(os.path.dirname(__file__), 'resources', 'meals.json')
+    dict_of_meals = {}
+
+    # grab JSON to read - returns a dict
+    json = JSONHandler(path)
+    json_dict = json.read_json()
+
+    for key, value in json_dict.items():
+        dict_of_meals.update({key: json_dict[key]["Display Name"]})
+
+    return dict_of_meals
 
 def gather_meals_by_search(search: str):
     """

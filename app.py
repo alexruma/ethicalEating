@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from dictionary_parser import gather_full_ingredient_list, gather_ingredient_by_key
+from dictionary_parser import gather_full_ingredient_list, gather_ingredient_by_key, gather_meals_by_category, gather_meals_dict_by_category
 app = Flask(__name__)
 
 # Render homepage/index
@@ -33,6 +33,33 @@ def new_recipe():
 
     return render_template('ingredients.html', recipe_name=recipe_name, data=ingredients_dict)
 
+# Handle POST request from selecting meal on index page. Will redirect to approriate recipe list page.
+@app.route("/recipes_direct", methods=["POST"])
+def recipe_list_direct():
+
+    meal_name = request.form['submit']
+    print(meal_name)
+
+    return redirect(url_for("recipes", meal_name = meal_name))
+
+# Render list_of_recipes
+@app.route("/<meal_name>/" , methods=["GET", "POST"])
+def recipes(meal_name):
+    print(meal_name)
+    meal_dict = gather_meals_dict_by_category(meal_name)
+   
+    print(meal_dict)
+  
+
+    return render_template('recipes.html', meal_name = meal_name, meal_dict = meal_dict)
+
+# Handle GET request from selecting meal on recipes.html and render ingredients.
+@app.route("/recipe_display", methods=["GET"])
+def recipe_display():
+    print("hey")
+    print(request.args)
+
+    return render_template('recipe_display.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
