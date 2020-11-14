@@ -4,8 +4,7 @@
 <div id=" general">
     <center>
         <body>
-            <!--Will return a random recipe; not functional; JSON template TBD-->
-            <form action="random.html" method="POST">
+            <form action="/lucky" method="POST">
                 <fieldset>
                     <fieldset>
                         <label>
@@ -20,7 +19,18 @@
                     
                 </fieldset>
             </form>
+            <!--Populates this part of page with randomly generated recipe and ingredients related to recipe-->
+            <h1 class="subheader">Recipe for {{ recipe_name }}</h1>
 
+            <table class="mainbody">
+                {% for key, value in data.items() %}
+                    <tr>
+                        <td>
+                            {{ value }}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
         </body>
     </center>
 </div>
