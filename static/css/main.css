@@ -169,7 +169,7 @@ input[type=text], input[type=password] {
 .callout {
     margin: 0;
 }
-/*This section is for the index specifically. May need its own css file */
+/*This section is for the index specifically. May need its own css file. */
 .meal_list_link {
     padding: 0;
     border: none;
@@ -179,4 +179,51 @@ input[type=text], input[type=password] {
 
 .meal_list_link:hover {
     color: aqua;
+}
+
+/* This seciton is for recipe_display. May need its own CSS file. */
+.dropdown-grid-1 {
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    font-family: "Garamond";
+    font-weight: bold;
+    text-align: center;
+    margin: 1.5%
+}
+
+@media screen and (max-width: 60em) {
+    .dropdown-grid-1 {
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        -ms-grid-row: 1;
+        grid-row: 1;
+        
+    }
+}
+
+.dropdown-grid-2 {
+    -ms-grid-column: 3;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    font-family: "Garamond";
+    font-weight: bold;
+    text-align: center;
+    margin: 1.5%
+}
+
+@media screen and (max-width: 60em) {
+    .dropdown-grid-2 {
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        -ms-grid-row: 2;
+        grid-row: 2;
+
+    }
 }

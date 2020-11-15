@@ -111,8 +111,8 @@
       ""
     ]
   },
-  "cheese": {
-    "Display Name": "Cheese",
+  "cheddarCheese": {
+    "Display Name": "Cheddar Cheese",
     "Water Issue": 1,
     "CO2 Issue": 0,
     "Ethical Alternatives": [
@@ -297,7 +297,7 @@
   },
   "potatoes": {
     "Display Name": "Potatoes",
-    "Water Issue": 1,
+    "Water Issue": 0,
     "CO2 Issue": 0,
     "Ethical Alternatives": [
       ""
@@ -438,5 +438,39 @@
     "Ethical Alternatives": [
       ""
     ]
+  },
+  "grilledChicken": {
+    "Display Name": "Grilled Chicken",
+    "Water Issue": 0,
+    "CO2 Issue": 1,
+    "Animal Product": 1,
+    "Ethical Alternatives": [
+      ""
+    ],
+    "Categories": ["Lunch", "Dinner", "Meat"]
+  },
+
+  "sourCream": {
+    "Display Name": "Sour Cream",
+    "Water Issue": 1,
+    "CO2 Issue": 1,
+    "Animal Product": 1,
+    "Ethical Alternatives": [
+      ""
+    ],
+    "Categories": ["Breakfat", "Lunch", "Dinner", "Dairy"]
+  },
+
+  "garlic": {
+    "Display Name": "Garlic",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Animal Product": 0,
+    "Ethical Alternatives": [
+      ""
+    ],
+    "Categories": ["Breakfat", "Lunch", "Dinner", "Spices"]
   }
+
+  
 }

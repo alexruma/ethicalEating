@@ -1,6 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class = mainheader>TEST {{meal_name}}</h1>
+<h1 class = mainheader>{{recipe_name}} Recipe</h1>
+
+<div class = "container">
+    <ul>
+        {%for item in ingredients%}
+        <li class="ingredient-display">
+            {{item[1]}}
+            <div class = "dropdown-btn-div">
+                <button class = "dropdown-btn dropdown-grid-1">Ethical Issues</button>
+                <button class = "dropdown-btn dropdown-grid-2">Potential Alternatives</button>
+            </div>
+        </li>
+        {%endfor%}
+    </ul>
+</div>
+
 
 {% endblock %}
