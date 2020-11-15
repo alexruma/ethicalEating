@@ -46,7 +46,8 @@ def gather_meals_dict_by_category(category: str):
     json_dict = json.read_json()
 
     for key, value in json_dict.items():
-        dict_of_meals.update({key: json_dict[key]["Display Name"]})
+         if value[category] == 1:
+            dict_of_meals.update({key: json_dict[key]["Display Name"]})
 
     return dict_of_meals
 

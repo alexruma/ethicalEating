@@ -192,7 +192,7 @@ input[type=text], input[type=password] {
 .callout {
     margin: 0;
 }
-/*This section is for the index specifically. May need its own css file */
+/*This section is for the index specifically. May need its own css file. */
 .meal_list_link {
     padding: 0;
     border: none;
@@ -203,5 +203,4 @@ input[type=text], input[type=password] {
 .meal_list_link:hover {
     color: aqua;
 }
-
 

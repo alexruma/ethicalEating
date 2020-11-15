@@ -140,7 +140,7 @@
       "bacon",
       "eggs",
       "milk",
-      "cheese",
+      "cheddarCheese",
       "salt",
       "blackPepper"
     ]
@@ -240,7 +240,7 @@
       "whiteBread",
       "vegetableOil",
       "sausagePatties",
-      "cheese",
+      "cheddarCheese",
       "eggs"
     ]
   },
@@ -261,7 +261,7 @@
       "mushrooms",
       "spinach",
       "tomatoes",
-      "cheese",
+      "cheddarCheese",
       "eggs",
       "canolaOil",
       "milk",
@@ -274,7 +274,7 @@
     "Display Name": "Bacon and Cheese Omelet",
     "Search Terms": [
       "bacon",
-      "cheese",
+      "cheddarCheese",
       "eggs",
       "omelet"
     ],
@@ -288,13 +288,13 @@
       "blackPepper",
       "butter",
       "bacon",
-      "cheese"
+      "cheddarCheese"
     ]
   },
   "cheeseOmelet": {
     "Display Name": "Cheese Omelet",
     "Search Terms": [
-      "cheese",
+      "cheddarCheese",
       "eggs",
       "omelet"
     ],
@@ -307,7 +307,7 @@
       "salt",
       "blackPepper",
       "butter",
-      "cheese"
+      "cheddarCheese"
     ]
   },
   "blueberryMuffins": {
@@ -319,7 +319,7 @@
     "Breakfast": 1,
     "Lunch": 0,
     "Dinner": 0,
-    "Dessert": 0,
+    "Dessert": 1,
     "Ingredients": [
       "flour",
       "sugar",
@@ -343,7 +343,7 @@
     "Breakfast": 1,
     "Lunch": 0,
     "Dinner": 0,
-    "Dessert": 0,
+    "Dessert": 1,
     "Ingredients": [
       "flour",
       "sugar",
@@ -374,7 +374,7 @@
       "refriedBeans",
       "butter",
       "eggs",
-      "cheese",
+      "cheddarCheese",
       "bacon",
       "salsa"
     ]
@@ -431,8 +431,95 @@
       "salt",
       "blackPepper",
       "ham",
-      "cheese",
+      "cheddarCheese",
       "greenOnions"
     ]
+  },
+  
+  "grilledCheeseSandwich": {
+    "Display Name": "Grilled Cheese Sandwich",
+    "Search Terms": [
+      "cheese",
+      "sandwich"
+    ],
+    "Breakfast": 0,
+    "Lunch": 1,
+    "Dinner": 0,
+    "Dessert": 0,
+    "Ingredients": [
+      "butter",
+      "whiteBread",
+      "pepperJackCheese",
+      "cheddarCheese"
+    ]
+  },
+
+  "chickenBeanBurrito": {
+    "Display Name": "Chicken and Bean Burrito",
+    "Search Terms": [
+      "burrito",
+      "chicken",
+      "beans",
+      "mexican",
+      "avocado",
+      "salsa"
+    ],
+    "Breakfast": 0,
+    "Lunch": 1,
+    "Dinner": 1,
+    "Dessert": 0,
+    "Ingredients": [
+      "grilledChicken",
+      "refriedBeans",
+      "pepperJackCheese",
+      "sourCream",
+      "tomatoes",
+      "avocado",
+      "cornTortillas",
+      "vegetableOil",
+      "salsa"
+   
+    ]
+  },
+  
+  "grilledChickenSandwich": {
+    "Display Name": "Grilled Chicken Sandwich",
+    "Search Terms": [
+      "sandwich",
+      "chicken",
+      "avocado"
+    ],
+    "Breakfast": 0,
+    "Lunch": 1,
+    "Dinner": 1,
+    "Dessert": 0,
+    "Ingredients": [
+      "grilledChicken",
+      "pepperJackCheese",
+      "tomatoes",
+      "avocado",
+      "whiteBread",
+      "vegetableOil"
+   
+    ]
+  },
+  
+  "mashedPotatoes": {
+    "Display Name": "Mashed Potatoes",
+    "Search Terms": [
+      "potatoes",
+      "sides"
+    ],
+    "Breakfast": 0,
+    "Lunch": 1,
+    "Dinner": 1,
+    "Dessert": 0,
+    "Ingredients": [
+      "potatoes",
+      "butter",
+      "milk",
+      "garlic"
+    ]
   }
+  
 }

@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from dictionary_parser import gather_full_ingredient_list, gather_ingredient_by_key, gather_meals_by_category, gather_meals_dict_by_category
+from dictionary_parser import gather_full_ingredient_list, gather_ingredient_by_key, gather_meals_by_category, gather_meals_dict_by_category, gather_ingredients_by_meal
 app = Flask(__name__)
 
 # Render homepage/index
@@ -56,10 +56,14 @@ def recipes(meal_name):
 # Handle GET request from selecting meal on recipes.html and render ingredients.
 @app.route("/recipe_display", methods=["GET"])
 def recipe_display():
-    print("hey")
-    print(request.args)
 
-    return render_template('recipe_display.html')
+    key = request.args['meal']
+    recipe_name = request.args['name']
+
+    ingredients = gather_ingredients_by_meal(key)
+    print(ingredients)
+
+    return render_template('recipe_display.html', ingredients = ingredients, recipe_name = recipe_name)
 
 if __name__ == "__main__":
     app.run(debug=True)
