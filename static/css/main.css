@@ -30,6 +30,29 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
+/*Sidebar CSS Submit button*/
+.button {
+    display       : inline-block;
+    border-radius : 5%;          
+    font-size     : 14pt;       
+    text-align    : center;      
+    cursor        : pointer;     
+    padding       : 12px 12px;   
+    background    : rgba(102, 102, 255, 0.84);     
+    color         : rgba(255, 255, 255, 0.72);     
+    line-height   : 1em;         
+    transition    : .3s;         
+    box-shadow    : 7px 7px 3px #666666;  
+    border        : 2px solid rgba(102, 102, 255, 0.84);    
+  }
+
+  .button:hover {
+    box-shadow    : none;       
+    color         : rgba(102, 102, 255, 0.84);     
+    background    : rgba(255, 255, 255, 0.72);     
+  }
+
+
 /*Top of page CSS - Base Template*/
 .mainheader {
     outline: none;
@@ -180,3 +203,5 @@ input[type=text], input[type=password] {
 .meal_list_link:hover {
     color: aqua;
 }
+
+
