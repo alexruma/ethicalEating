@@ -3,33 +3,19 @@
 {% block content %}
 <body>
     <div class="container">
-        <!--
-        <a class="grid-1 callout primary" href="/list_of_recipes.html">
-            <div>Breakfast</div>
-        </a>
-        <a class="grid-2 callout warning" href="/list_of_recipes.html">
-            <div>Lunch</div>
-        </a>
-        <a class="grid-3 callout alert" href="/list_of_recipes.html">
-            <div>Dinner</div>
-        </a>
-        <a class="grid-4 callout success" href="/list_of_recipes.html">
-            <div>Dessert</div>
-        </a>
-        -->
-        <form class="grid-1 callout primary" action="/recipes_direct" method="POST">
+        <form class="grid-1 callout primary" action="/recipe_list" method="POST">
             <input class="meal_list_link" type ="submit" id = "Breakfast" name = "submit" value = "Breakfast">
         </form>
 
-        <form class="grid-2 callout warning" action="/recipes_direct" method="POST">
+        <form class="grid-2 callout warning" action="/recipe_list" method="POST">
             <input class="meal_list_link" type ="submit" id = "Lunch" name = "submit" value = "Lunch">
         </form>
 
-        <form class="grid-3 callout alert" action="/recipes_direct" method="POST">
+        <form class="grid-3 callout alert" action="/recipe_list" method="POST">
             <input class="meal_list_link" type ="submit" id = "Dinner" name = "submit" value = "Dinner">
         </form>
 
-        <form class="grid-4 callout success" action="/recipes_direct" method="POST">
+        <form class="grid-4 callout success" action="/recipe_list" method="POST">
             <input class="meal_list_link" type ="submit" id = "Dessert" name = "submit" value = "Dessert">
         </form>
     </div>
