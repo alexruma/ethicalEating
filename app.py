@@ -42,7 +42,15 @@ def new_recipe():
 def recipe_list():
 
     meal_category = request.form['submit']
+    print(meal_category)
+
+    return redirect(url_for("recipes", meal_category=meal_category))
+
+# Render list_of_recipes
+@app.route("/<meal_category>/", methods=["GET", "POST"])
+def recipes(meal_category):
     meal_dict = gather_meals_by_category(meal_category)
+    print(meal_dict)
 
     return render_template('recipes.html', category=meal_category, data=meal_dict)
 
