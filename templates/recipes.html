@@ -1,23 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class = mainheader>{{meal_name}} Recipes {{meal_list}}</h1>
-
+<h1 class = mainheader>{{category}} Recipes </h1>
 
     <table class="mainbody">
-        {% for key, value in meal_dict.items() %}
+        {% for key, value in data.items() %}
             <tr>
                 <td>
-                    <form action="/recipe_display" method="GET">
-                        <input type ="hidden" name = "meal" value = "{{ key }}">
-                        <input class="meal_list_link" name="name" type ="submit" value = '{{ value }}'>
+                    <form action="/recipe_ingredients" method="GET">
+                        <input type ="hidden" name="meal" value="{{ key }}">
+                        <input class="meal_list_link" name="name" type="submit" value='{{ value }}'>
                     </form>
                 </td>
             </tr>
         {% endfor %}
     </table>
 
-    <p>Recipe Name: <input type ="text" name="recipe_name" required></p>
+    <!--< p>Recipe Name: <input type ="text" name="recipe_name" required></p> -->
     <p><input type ="submit" value="Create Meal"></p>
 
 

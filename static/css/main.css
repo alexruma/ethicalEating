@@ -70,6 +70,7 @@ input[type=text], input[type=password] {
     margin-left: 245px; /* sidebar width is 200 so I added 15 to give some whitespace */
     font-size: 28px;
     padding: 0px 10px;
+    list-style-type:none;
 }
 
 .mainbody {
@@ -77,8 +78,25 @@ input[type=text], input[type=password] {
     font-size: 14px
 }
 
-/*Index/Home page CSS - Categories*/
+/*List and Button CSS for ingredients.html and recipe.html*/
+.div_button {
+    display: inline-block;
+    margin-right: 10px;
+    float: right;
+}
 
+.list {
+   border-style: double;
+   list-style-type:none;
+   padding:8px;
+   margin:0
+   border-bottom:1px solid #ddd
+   font-size     : 14pt;
+}
+
+
+
+/*Index/Home page CSS - Categories*/
 .container {
     display: -ms-grid;
     display: grid;
