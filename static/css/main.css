@@ -33,7 +33,7 @@ input[type=text], input[type=password] {
 /*Sidebar CSS Submit button*/
 .button {
     display       : inline-block;
-    border-radius : 5%;          
+    border-radius : 20%;          
     font-size     : 14pt;       
     text-align    : center;      
     cursor        : pointer;     
@@ -101,12 +101,13 @@ input[type=text], input[type=password] {
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: (1fr)[2];
+    grid-row-gap: 3px;
+    grid-column-gap: 3px;
     grid-template-rows: repeat(2, 1fr);
     -ms-grid-columns: (1fr)[4];
     grid-template-columns: repeat(4, 1fr);
     width: 75vw;
     height: 75vh;
-
     margin-left: 245px; /* sidebar width is 200 so I added 15 to give some whitespace */
     padding: 0px 10px;
 }
@@ -146,7 +147,7 @@ input[type=text], input[type=password] {
     grid-column-end: 5;
     -ms-grid-row: 1;
     grid-row: 1;
-    background:purple;
+    background:rgb(199,80,199);
     font-family: "Garamond";
     font-weight: bold;
     text-align: center;
@@ -169,7 +170,7 @@ input[type=text], input[type=password] {
     grid-column-end: 3;
     -ms-grid-row: 2;
     grid-row: 2;
-    background:red;
+    background:rgb(250, 37, 37);
     font-family: "Garamond";
     font-weight: bold;
     text-align: center;
@@ -216,10 +217,52 @@ input[type=text], input[type=password] {
     border: none;
     background: none;
     font-weight: bold;
+    font-family: 'Times New Roman'; /*font style of each menu*/
+    font-size: 16px;
 }
 
 .meal_list_link:hover {
     color: aqua;
+}
+
+/*font for the home page   meal caterogies*/
+.meal_list_link_f {
+    padding: 0;
+    border: none;
+    background: none;
+    font-weight: bold;
+    font-family:'Playfair Display', serif;
+    font-size:27px;
+    color: #993300;
+}
+
+.meal_list_link_f:hover {
+    color: aqua;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #4169e1;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip{
+        width: 100px;
+        height: 25px;
+        position: relative;
+        display: block;
+        margin: auto;
+        bottom: 5px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
 
 /* This seciton is for recipe_display. May need its own CSS file. */
