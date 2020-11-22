@@ -1,11 +1,10 @@
-﻿{% extends "base.html" %}
+﻿﻿{% extends "base.html" %}
 
 {% block content %}
 <div id=" general">
     <center>
         <body>
-            <!--Will return a random recipe; not functional; JSON template TBD-->
-            <form action="random.html" method="POST">
+            <form action="/lucky" method="POST">
                 <fieldset>
                     <fieldset>
                         <label>
@@ -13,14 +12,25 @@
                             <br />
                             Look no further; press the button as many times as you'd like :)'
                             <br />
-                            <!-- <input type="image" id="="redbutton" src="redbutton.png"/>-->
+                            <input type="image" id="=" redbutton" src="redbutton.png" />
                         </label>
                     </fieldset>
                     <br />
-                    
+
                 </fieldset>
             </form>
+            <!--Populates this part of page with randomly generated recipe and ingredients related to recipe-->
+            <h1 class="subheader">Recipe for {{ recipe_name }}</h1>
 
+            <table class="mainbody">
+                {% for key, value in data.items() %}
+                <tr>
+                    <td>
+                        {{ value }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
         </body>
     </center>
 </div>
