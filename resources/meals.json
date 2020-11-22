@@ -520,6 +520,50 @@
       "milk",
       "garlic"
     ]
+  },
+  "cheeseBurger": {
+    "Display Name": "Cheeseburger",
+    "Search Terms": [
+      "cheese burger",
+      "burger",
+      "beef",
+      "hamburger",
+      "cheeseburger"
+    ],
+    "Breakfast": 0,
+    "Lunch": 1,
+    "Dinner": 1,
+    "Dessert": 0,
+    "Ingredients": [
+      "tomatoes",
+      "butter",
+      "cheddarCheese",
+      "lettuce",
+      "groundBeefBurger",
+      "wholeWheatBun"
+    ]
+  },
+  "blackbeanBurger": {
+    "Display Name": "Black Bean Avocado Burger",
+    "Search Terms": [
+      "black bean burger",
+      "burger",
+      "bean",
+      "hamburger",
+      "cheeseburger"
+    ],
+    "Breakfast": 0,
+    "Lunch": 1,
+    "Dinner": 1,
+    "Dessert": 0,
+    "Ingredients": [
+      "tomatoes",
+      "olive oil",
+      "cheddarCheese",
+      "lettuce",
+      "avocado",
+      "blackBeanBurger",
+      "wholeWheatBun"
+    ]
   }
-  
 }
