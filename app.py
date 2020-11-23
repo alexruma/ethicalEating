@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from dictionary_parser import gather_full_ingredient_list, gather_ingredient_by_key, gather_meals_by_category, gather_ingredients_by_meal
+from dictionary_parser import gather_full_ingredient_list, gather_ingredient_by_key, gather_meals_by_search, gather_meals_by_category,  gather_ingredients_by_meal
 
 app = Flask(__name__)
 
@@ -9,29 +9,38 @@ def index():
     return render_template('index.html')
 
 # Render recipe-search
-@app.route('/recipe_search', methods=["GET", "POST"])
+@app.route('/test-search', methods=["GET", "POST"])
+def recipe_search():
+    return render_template('recipe_search.html')
+
+# Render recipe-search results
+@app.route('/recipe_search_results', methods=["GET", "POST"])
 def show_results():
-    recipe_list = gather_meals()
-    for recipe in recipe_list:
-        if recipe[0][0] is request.form["recipename"]:
-            ingredients_list = {}
-            for ingredient in recipe[6]:
-                 ingredients_list = update(ingredient)
-            return render_template('ingredients.html', recipe_name=recipename, data=ingredients_list)
+    search_val = request.form["search-val"]
+    result_dict = gather_meals_by_search(search_val)
+    
+    return render_template('recipes.html', category="Relevant", data=result_dict)
+    # recipe_list = gather_meals()
+    # for recipe in recipe_list:
+    #     if recipe[0][0] is request.form["recipename"]:
+    #         ingredients_list = {}
+    #         for ingredient in recipe[6]:
+    #              ingredients_list = update(ingredient)
+    #         return render_template('ingredients.html', recipe_name=recipename, data=ingredients_list)
 
 # Render lucky
-@app.route('/lucky')
-def random():
-    size = 0
-    recipe_list = gather_meals()
-    for recipe in recipe_list:
-        size = size + 1
-    random_recipe = recipe_list[randrang(size+1)]
-    random_name = recipe_list[0][0]
-    ingredients_list = {}
-    for ingredient in random_recipe[6]:
-        ingredient_list = update(ingredient)
-    return render_template('lucky.html', recipe_name=random_name, data=ingredient_list)
+# @app.route('/lucky')
+# def random():
+#     size = 0
+#     recipe_list = gather_meals()
+#     for recipe in recipe_list:
+#         size = size + 1
+#     random_recipe = recipe_list[randrang(size+1)]
+#     random_name = recipe_list[0][0]
+#     ingredients_list = {}
+#     for ingredient in random_recipe[6]:
+#         ingredient_list = update(ingredient)
+#     return render_template('lucky.html', recipe_name=random_name, data=ingredient_list)
 
 # Render create-recipe
 @app.route('/create_recipe', methods=["GET", "POST"])
