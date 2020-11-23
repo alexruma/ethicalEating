@@ -13,7 +13,6 @@ def gather_meals():
     path = os.path.join(os.path.dirname(__file__), 'resources', 'meals.json')
     return_list = []
 
-    # grab JSON to read - returns a dict
     json = JSONHandler(path)
     json_dict = json.read_json()
 
@@ -35,7 +34,6 @@ def gather_meals_by_category(category: str):
     path = os.path.join(os.path.dirname(__file__), 'resources', 'meals.json')
     dict_of_meals = {}
 
-    # grab JSON to read - returns a dict
     json = JSONHandler(path)
     json_dict = json.read_json()
 
@@ -58,7 +56,6 @@ def gather_meals_by_search(search: str):
     path = os.path.join(os.path.dirname(__file__), 'resources', 'meals.json')
     dict_of_meals = {}
 
-    # grab JSON to read - returns a dict
     json = JSONHandler(path)
     json_dict = json.read_json()
 
