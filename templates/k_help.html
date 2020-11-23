@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+
+.font-main {
+    margin-top: 1px;
+    margin-left: 500px;
+}
+
+.title{
+    margin-top: 100px;
+    margin-bottom: 40px;
+    margin-left: 500px; 
+    font-weight: light;
+    font-size: 25px;
+}
+
+.button_1{
+    margin-top: 15px;
+    margin-bottom: 1px;
+    margin-left: 500px;
+    display: inline-block;
+    border-radius : 14%;          
+    font-size     : 18pt;        
+    text-align    : center;      
+    cursor        : pointer;     
+    padding       : 15px 15px;   
+    background    : #66ff66;     
+    color         : #ffffff;     
+    line-height   : 1em;       
+    transition    : .3s;         
+    box-shadow    : 6px 6px 7px #666666;  
+    border        : 2px solid #66ff66;   
+      
+}
+
+.button_1:hover{
+    box-shadow    : none;       
+    color         : #66ff66;     
+    background    : #ffffff;     
+}
+
+#btn1 {
+    margin-bottom: 15px;
+    margin-left: 500px;
+    
+}
+
+#tBox{
+    margin-left: 600px;
+    margin-top: 0px;
+    width: 50%;
+    color: #232323;
+    background: #fff8e8;
+    border-left: solid 10px #ffc06e;
+}
+
+
+.open{
+   margin-left:500px;
+   background    : #66ff66;     
+   color: #fff;
+   cursor: pointer;
+   width: 200px;
+   display: inline-block;
+   border-radius : 14%;          
+   font-size     : 18pt;        
+   text-align    : center;      
+   cursor        : pointer;     
+   padding       : 15px 15px;
+   color         : #ffffff;     
+   line-height   : 1em;       
+   transition    : .3s;         
+   box-shadow    : 6px 6px 7px #666666;  
+   border        : 2px solid #66ff66; 
+}
+
+.open:hover {
+    box-shadow    : none;       
+    color         : #66ff66;     
+    background    : #ffffff;     
+}
+
+
+#slideBox{
+   margin-left:500px;
+   padding: 10px; 
+   border: 1px #ccc solid;
+   display: none;
+}
+
+.link1{
+  margin-left: 500px;
+}
+
+</style>
+
+<body>
+    
+    <p class="title">About Ethical Eating:</p>
+      <div id="area1">
+        <button type="button" id="btn1" class="button_1">Why eat ethically?</button>
+        <br>
+        <input type="text" id="tBox" class="font-main" />
+       </div>
+
+    <p class="open">What are environmental concerns?</p>
+      <div id="slideBox">
+     As one example, choosing an excessive amount of water-intensive vegetables for human/animal consumption may erode soils.
+     Also, 
+       </div>
+    </br>
+
+       
+
+<a href="https://sustainabletable.org.au/all-things-ethical-eating/" class="link1">For more information</a>
+
+
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script class="button_2">
+       
+
+$("#btn1").on("click", function()  {
+     
+        let message = `To be conciously aware of concern, such as environment, economies, animal-wellfare, and sustainabilities. \n And`;
+  // show a message on click
+        $("#tBox").val(message);
+});
+
+$(function(){  
+      $(".open").click(function(){
+      $("#slideBox").slideToggle("slow");
+   });
+});
+
+//To show all the url pages on a new tab
+window.onload = function() {
+	for (var i = 0; i < document.links.length; i++) {
+		var elem = document.links[i];
+		if (elem.href.match(/^http/)) {
+			elem.target = "_blank";
+		}
+	}
+}
+
+</script>
+ 
+</body>
+
+
+{% endblock %}
+
+
+
