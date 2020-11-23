@@ -17,30 +17,19 @@
     font-size: 25px;
 }
 
-.button_1{
+#button_1{
     margin-top: 15px;
     margin-bottom: 1px;
     margin-left: 500px;
-    display: inline-block;
-    border-radius : 14%;          
-    font-size     : 18pt;        
-    text-align    : center;      
-    cursor        : pointer;     
-    padding       : 15px 15px;   
-    background    : #66ff66;     
-    color         : #ffffff;     
-    line-height   : 1em;       
-    transition    : .3s;         
-    box-shadow    : 6px 6px 7px #666666;  
-    border        : 2px solid #66ff66;   
-      
+   
 }
 
-.button_1:hover, .open:hover{
+#button_1:hover{
     box-shadow    : none;       
     color         : #66ff66;     
     background    : #ffffff;     
 }
+
 
 #btn1 {
     margin-bottom: 15px;
@@ -57,24 +46,35 @@
     border-left: solid 10px #ffc06e;
 }
 
+.greenButton{
+ display: inline-block;
+    border-radius : 14%;          
+    font-size     : 18pt;        
+    text-align    : center;      
+    cursor        : pointer;     
+    padding       : 15px 15px;   
+    background    : #66ff66;     
+    color         : #ffffff;     
+    line-height   : 1em;       
+    transition    : .3s;         
+    box-shadow    : 6px 6px 7px #666666;  
+    border        : 2px solid #66ff66; 
+}
 
-.open{
+
+#open{
    margin-left:500px;
    background    : #66ff66;     
    color: #fff;
    cursor: pointer;
    width: 200px;
-   display: inline-block;
-   border-radius : 14%;          
-   font-size     : 18pt;        
-   text-align    : center;      
-   cursor        : pointer;     
-   padding       : 15px 15px;
-   color         : #ffffff;     
-   line-height   : 1em;       
-   transition    : .3s;         
-   box-shadow    : 6px 6px 7px #666666;  
-   border        : 2px solid #66ff66; 
+ 
+}
+
+#open:hover {
+    box-shadow    : none;       
+    color         : #66ff66;     
+    background    : #ffffff;     
 }
 
 #slideBox{
@@ -94,12 +94,12 @@
     
     <p class="title">About Ethical Eating:</p>
       <div id="area1">
-        <button type="button" id="btn1" class="button_1">Why eat ethically?</button>
+        <button type="button" id="btn1" class="greenButton" id="button_1">Why eat ethically?</button>
         <br>
         <input type="text" id="tBox" class="font-main" />
        </div>
 
-    <p class="open">What are environmental concerns?</p>
+    <p id="open" class="greenButton">What are environmental concerns?</p>
       <div id="slideBox">
      As one example, choosing an excessive amount of water-intensive vegetables for human/animal consumption may erode soils.
      Also, 
