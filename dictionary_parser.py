@@ -3,17 +3,18 @@ from json_handler import JSONHandler
 
  def gather_meals():
      """
-     When on the randomizer page, will gather all meals in our database return dictionary list with all meals.
-    
-      :return: list of pairs containing key and Display Name for the meals found. i.e.:
-      [[donut, Donut],
-      [veggieOmelet, Veggie Omelet],
-      [huevoRanchero, Huevo Ranchero]]
+     When generating a random recipe, we need a full list of all recipes to pull from.
+     Function gathers all key/value pairs for meals in our database and returns a dictionary list of them.
+     
+      :return: dict of pairs containing key and Display Name for the meals found. i.e.:
+      {'buttermilkPancakes': 'Buttermilk Pancakes',
+       'eggsBenedict': 'Eggs Benedict',
+       'biscuitsAndGravy': 'Biscuits and Gravy'}
+   
      """
      path = os.path.join(os.path.dirname(__file__), 'resources', 'meals.json')
      meals_dict = {}
 
-     # grab JSON to read - returns a dict
      json = JSONHandler(path)
      json_dict = json.read_json()
 
