@@ -136,12 +136,13 @@ div.content {
 }
 
 .list {
-   border-style: double;
-   list-style-type:none;
-   padding:8px;
-   margin:0
-   border-bottom:1px solid #ddd
-   font-size     : 14pt;
+    width: 800px;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 500px;
+    margin: auto;
+    margin-top: 50px;
+    border-style: solid; 
 }
 
 
