@@ -25,8 +25,7 @@ def show_results():
 def random():
     size = 0
     recipe_list = gather_meals()
-    for recipe in recipe_list:
-        size++
+    size = len(recipe_list)
     random_recipe = recipe_list[randrang(size+1)]
     random_name = recipe_list[0][0]
     ingredients_list = {}
