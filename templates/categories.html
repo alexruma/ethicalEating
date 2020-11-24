@@ -1,0 +1,52 @@
+<!--Added file independently in order to decide if we want the users to click on a button or a form submit-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel='stylesheet' type='text/css' media='screen' href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Pacifico&display=swap" rel="stylesheet">
+
+    <title>Ethical Eating</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <!--Sidebar for navigation-->
+    <div class = "sidebar">
+        <h1>Ethical Eating</h1>
+        </br>
+        <form class = "user_form" action= "/login.html" method="POST">
+            <legend>LOGIN</legend>
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <br />
+            <button type="submit" value="Submit" class="button">Submit</button>
+        </form>
+        </br>
+        </br>
+        <a href="/">Home</a>
+        <a href="/recipe_search">Recipe Search</a>
+        <a href="/create_recipe">Create Recipe</a>
+        <a href="/lucky">I'm Feeling Lucky!</a>
+    </div>
+    <div class = "categories">
+        <!--Will specify onclick link later-->
+        <button type="button" onclick="" class = "tile breakfast">
+            Breakfast
+        </button>
+        <button type="button" onclick="" class = "tile lunch">
+            Lunch
+        </button>
+    </div>
+    <div class = "categories">
+        <button type="button" onclick="" class = "tile dinner">
+            Dinner
+        </button>
+        <button type="button" onclick="" class="tile dessert">
+            Dessert
+        </button>
+    </div>
+</body>
+
+</html>
