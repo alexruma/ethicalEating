@@ -76,12 +76,48 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
+/*Style for each category user can click on*/
+.tile {
+    height: 400px;
+    width: 550px;
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 2px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 400px;
+    font-size: 90px;
+    font-family: 'Pacifico', cursive;
+}
+/*CSS styles for category tiles*/
+.breakfast {
+    background-color:#3366ff;
+}
+
+.lunch {
+    background-color: #ffcc00;
+}
+
+.dinner {
+    background-color: #cc0000;
+}
+
+.dessert {
+    background-color: #ff66cc;
+}
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
   margin-left: 300px;
   padding: 1px 16px;
   height: 1000px;
+}
+
+/*Style for divs that hold categories*/
+div.categories {
+    margin-left: 310px;
+    width: 90%;
+    padding-top: 10px;
 }
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
