@@ -172,13 +172,14 @@ div.categories {
 }
 
 .list {
-    width: 800px;
+    list-style-type: none;
+    padding; 8px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
     overflow: scroll;
     overflow-x: hidden;
-    height: 500px;
     margin: auto;
-    margin-top: 50px;
-    border-style: solid; 
+    border-style: solid;
 }
 
 
