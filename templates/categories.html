@@ -1,3 +1,4 @@
+<!--Added file independently in order to decide if we want the users to click on a button or a form submit-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,9 +30,22 @@
         <a href="/create_recipe">Create Recipe</a>
         <a href="/lucky">I'm Feeling Lucky!</a>
     </div>
-    <div class = "content">
-        {% block content %}
-        {% endblock %}
+    <div class = "categories">
+        <!--Will specify onclick link later-->
+        <button type="button" onclick="" class = "tile breakfast">
+            Breakfast
+        </button>
+        <button type="button" onclick="" class = "tile lunch">
+            Lunch
+        </button>
+    </div>
+    <div class = "categories">
+        <button type="button" onclick="" class = "tile dinner">
+            Dinner
+        </button>
+        <button type="button" onclick="" class="tile dessert">
+            Dessert
+        </button>
     </div>
 </body>
 
