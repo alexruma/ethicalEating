@@ -16,7 +16,7 @@ class JSONHandler:
 
         return loaded_json
 
-    def write_json(self, output: str):
+    def write_json(self, output: dict):
 
         with open(self.path, 'w') as updated_json:
             json.dump(output, updated_json, indent=4)
