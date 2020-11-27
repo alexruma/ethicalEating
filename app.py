@@ -1,29 +1,34 @@
-from flask import Flask, render_template, request, redirect, url_for
-from dictionary_parser import gather_full_ingredient_list, gather_ingredient_by_key, gather_meals_by_search, gather_meals_by_category,  gather_ingredients_by_meal
+import random
+from flask import Flask, render_template, request, redirect, url_for, session
+from dictionary_parser import gather_full_ingredient_list, gather_ingredient_by_key, gather_meals_by_search, \
+    gather_meals_by_category, gather_ingredients_by_meal, gather_meals
 
 app = Flask(__name__)
+
 
 # Render homepage/index
 @app.route('/')
 def index():
     return render_template('index.html')
 
+
 # Render recipe-search
-@app.route('/test-search', methods=["GET", "POST"])
+@app.route('/recipe_search', methods=["GET", "POST"])
 def recipe_search():
     return render_template('recipe_search.html')
+
 
 # Render recipe-search results
 @app.route('/recipe_search_results', methods=["GET", "POST"])
 def show_results():
     search_val = request.form["search-val"]
     result_dict = gather_meals_by_search(search_val)
-    
+
     return render_template('recipes.html', category="Relevant", data=result_dict)
 
-# Render lucky
-@app.route('/lucky', methods = ["GET", "POST"])
-def random():
+
+@app.route('/lucky', methods=["GET", "POST"])
+def random_recipe():
     # Dictionary of recipe names
     recipe_dict = gather_meals()
     # Random key/value from meals.json
@@ -33,8 +38,8 @@ def random():
     # Entry's list of ingredients via gather_ingredients_by_meal, which uses the key value
     ingredients_dict = gather_ingredients_by_meal(random_key[0])
 
-    #Render with correct data
-    return render_template('lucky.html', recipe_name=display_name, data=ingredients_dict)
+    return render_template('ingredients.html', recipe_name=display_name, data=ingredients_dict)
+
 
 # Render create-recipe
 @app.route('/create_recipe', methods=["GET", "POST"])

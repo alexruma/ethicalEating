@@ -1,27 +1,24 @@
 import os
 from json_handler import JSONHandler
 
- def gather_meals():
-     """
-     When generating a random recipe, we need a full list of all recipes to pull from.
-     Function gathers all key/value pairs for meals in our database and returns a dictionary list of them.
-     
-      :return: dict of pairs containing key and Display Name for the meals found. i.e.:
-      {'buttermilkPancakes': 'Buttermilk Pancakes',
-       'eggsBenedict': 'Eggs Benedict',
-       'biscuitsAndGravy': 'Biscuits and Gravy'}
-   
-     """
-     path = os.path.join(os.path.dirname(__file__), 'resources', 'meals.json')
-     meals_dict = {}
 
-     json = JSONHandler(path)
-     json_dict = json.read_json()
+def gather_meals():
+    """
+    When on the randomizer page, will gather all meals in our database return dictionary list with all meals.
 
-     for key, value in json_dict.items():
-           meals_dict.update({key: json_dict[key]["Display Name"]})
+    :return: list of pairs containing key and Display Name for the meals found. i.e.:
+    {"donut": "Donut", "veggieOmelet": "Veggie Omelet", "huevoRanchero": "Huevo Ranchero"}
+    """
+    path = os.path.join(os.path.dirname(__file__), 'resources', 'meals.json')
+    meals_dict = {}
 
-     return meals_dict
+    json = JSONHandler(path)
+    json_dict = json.read_json()
+
+    for key, value in json_dict.items():
+        meals_dict.update({key: json_dict[key]["Display Name"]})
+
+    return meals_dict
 
 
 def gather_meals_by_category(category: str):
@@ -74,7 +71,7 @@ def gather_meals_by_search(search: str):
 def gather_ingredient_by_key(key: str):
     ingredient_path = os.path.join(os.path.dirname(__file__), 'resources', 'ingredients.json')
 
-    #print(key)
+    # print(key)
 
     # grab ingredients JSON to read and then parse for ingredients in recipe
     ingredient_json = JSONHandler(ingredient_path)
