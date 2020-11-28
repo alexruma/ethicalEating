@@ -81,6 +81,49 @@ def gather_ingredient_by_key(key: str):
 
     return ingredient
 
+def gather_ingredient_issues_by_key(key: str):
+    """
+    Returns a list of dicts of ethical issues for a specific ingredient.
+    """
+    ingredient_path = os.path.join(os.path.dirname(__file__), 'resources', 'ingredients.json')
+
+    # print(key)
+
+    # grab ingredients JSON to read and then parse for ingredients in recipe
+    ingredient_json = JSONHandler(ingredient_path)
+    ingredient_json_dict = ingredient_json.read_json()
+
+    
+    water_issue = ingredient_json_dict[key]["Water Issue"]
+    CO2_issue = ingredient_json_dict[key]["CO2 Issue"]
+    animal_product = ingredient_json_dict[key]["Animal Product"]
+
+    # List with a dict for each of the three potential issues. Each dict contains the issues value (1 for yes, 0 for no) and the text to be displayed if the issue is relevant.
+    issues_list = [{ "value":  water_issue, "text": "High Water Usage: This ingredient requires a significant amount of to produce." },
+    { "value":  CO2_issue, "text": "CO2 Emitter: The cultivation and production of this ingredient emits significant amouns of CO2 into the atmosphere. Consider alternatives with lower emissions." },
+    {"value":  animal_product, "text": "Animal Product: This ingredient is derived whole or partially from an animal product." }
+    ]
+    
+    return issues_list
+
+def gather_ingredient_alternatives_by_key(key: str):
+    """
+    Returns a list of alternatives for for a specific ingredient.
+    """
+    ingredient_path = os.path.join(os.path.dirname(__file__), 'resources', 'ingredients.json')
+
+    # print(key)
+
+    # grab ingredients JSON to read and then parse for ingredients in recipe
+    ingredient_json = JSONHandler(ingredient_path)
+    ingredient_json_dict = ingredient_json.read_json()
+
+    alternatives =  ingredient_json_dict[key]["Ethical Alternatives"]
+
+    return alternatives
+
+
+
 
 def gather_ingredients_by_meal(meal: str):
     """

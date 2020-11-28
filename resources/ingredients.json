@@ -8,6 +8,16 @@
       ],
       "Animal Product": 0
   },
+
+  "almondMilk": {
+    "Display Name": "Almond Milk",
+    "Water Issue": 1,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+},
   "avocado": {
       "Display Name": "Avocado",
       "Water Issue": 1,
@@ -22,7 +32,7 @@
       "Water Issue": 1,
       "CO2 Issue": 1,
       "Ethical Alternatives": [
-          ""
+          "veggieSausage"
       ],
       "Animal Product": 1
   },
@@ -46,7 +56,7 @@
   },
   "biscuits": {
       "Display Name": "Biscuits",
-      "Water Issue": 1,
+      "Water Issue": 0,
       "CO2 Issue": 0,
       "Ethical Alternatives": [
           ""
@@ -64,7 +74,7 @@
   },
   "blackPepper": {
       "Display Name": "Black Pepper",
-      "Water Issue": 1,
+      "Water Issue": 0,
       "CO2 Issue": 0,
       "Ethical Alternatives": [
           ""
@@ -101,7 +111,7 @@
   "butter": {
       "Display Name": "Butter",
       "Water Issue": 1,
-      "CO2 Issue": 0,
+      "CO2 Issue": 1,
       "Ethical Alternatives": [
           "oliveOil", "canolaOil"
       ],
@@ -109,7 +119,7 @@
   },
   "canolaOil": {
       "Display Name": "Canola Oil",
-      "Water Issue": 1,
+      "Water Issue": 0,
       "CO2 Issue": 0,
       "Ethical Alternatives": [
           ""
@@ -118,7 +128,7 @@
   },
   "cayennePepper": {
       "Display Name": "Cayenne Pepper",
-      "Water Issue": 1,
+      "Water Issue": 0,
       "CO2 Issue": 0,
       "Ethical Alternatives": [
           ""
@@ -128,15 +138,15 @@
   "cheddarCheese": {
       "Display Name": "Cheddar Cheese",
       "Water Issue": 1,
-      "CO2 Issue": 0,
+      "CO2 Issue": 1,
       "Ethical Alternatives": [
-          ""
+        "veganCheese"
       ],
-      "Animal Product": 0
+      "Animal Product": 1
   },
   "chiliFlakes": {
       "Display Name": "Chili Flakes",
-      "Water Issue": 1,
+      "Water Issue": 0,
       "CO2 Issue": 0,
       "Ethical Alternatives": [
           ""
@@ -209,7 +219,7 @@
   "greekYogurt": {
       "Display Name": "Greek Yogurt",
       "Water Issue": 1,
-      "CO2 Issue": 0,
+      "CO2 Issue": 1,
       "Ethical Alternatives": [
           ""
       ],
@@ -227,11 +237,11 @@
   "ham": {
       "Display Name": "Ham",
       "Water Issue": 1,
-      "CO2 Issue": 0,
+      "CO2 Issue": 1,
       "Ethical Alternatives": [
           ""
       ],
-      "Animal Product": 0
+      "Animal Product": 1
   },
   "honey": {
       "Display Name": "Honey",
@@ -244,7 +254,7 @@
   },
   "mapleSyrup": {
       "Display Name": "Maple Syrup",
-      "Water Issue": 1,
+      "Water Issue": 0,
       "CO2 Issue": 0,
       "Ethical Alternatives": [
           ""
@@ -256,13 +266,13 @@
       "Water Issue": 1,
       "CO2 Issue": 1,
       "Ethical Alternatives": [
-          ""
+          "almondMilk"
       ],
       "Animal Product": 1
   },
   "mushrooms": {
       "Display Name": "Mushrooms",
-      "Water Issue": 1,
+      "Water Issue": 0,
       "CO2 Issue": 0,
       "Ethical Alternatives": [
           ""
@@ -319,7 +329,7 @@
       "Water Issue": 1,
       "CO2 Issue": 1,
       "Ethical Alternatives": [
-          ""
+        "veganCheese"
       ],
       "Animal Product": 1
   },
@@ -490,7 +500,7 @@
       "Water Issue": 1,
       "CO2 Issue": 1,
       "Ethical Alternatives": [
-          ""
+          "almondMilk"
       ],
       "Animal Product": 1
   },
@@ -515,7 +525,7 @@
       "CO2 Issue": 1,
       "Animal Product": 1,
       "Ethical Alternatives": [
-          ""
+          "veganCheese"
       ],
       "Categories": [
           "Breakfat",
@@ -616,5 +626,14 @@
       ""
   ],
   "Animal Product": 0
+},
+"veganCheese": {
+    "Display Name": "Vegan Cheese",
+    "Water Issue":0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
 }
 }

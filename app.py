@@ -1,7 +1,6 @@
 import random
-from flask import Flask, render_template, request, redirect, url_for, session
-from dictionary_parser import gather_full_ingredient_list, gather_ingredient_by_key, gather_meals_by_search, \
-    gather_meals_by_category, gather_ingredients_by_meal, gather_meals
+from flask import Flask, render_template, request, redirect, url_for, session, jsonify
+from dictionary_parser import gather_full_ingredient_list, gather_ingredient_by_key, gather_meals_by_search, gather_meals_by_category, gather_ingredients_by_meal, gather_meals, gather_ingredient_issues_by_key, gather_ingredient_alternatives_by_key
 
 app = Flask(__name__)
 
@@ -13,7 +12,7 @@ def index():
 
 
 # Render recipe-search
-@app.route('/recipe_search', methods=["GET", "POST"])
+@app.route('/search-recipe', methods=["GET", "POST"])
 def recipe_search():
     return render_template('recipe_search.html')
 
@@ -85,6 +84,34 @@ def recipe_ingredients():
     ingredients = gather_ingredients_by_meal(key)
 
     return render_template('ingredients.html', recipe_name=recipe_name, data=ingredients)
+
+@app.route("/display_info", methods=["POST"])
+def display_info():
+    ingredient_key = request.form['ingredient_key']
+    info_type = request.form['info_type']
+    ingredient_name = gather_ingredient_by_key(ingredient_key)[ingredient_key]
+    
+    # Work if requesting ethical issues.
+    if info_type == "1":
+        issues_list = gather_ingredient_issues_by_key(ingredient_key)
+        issue_display_list = []
+    
+         # Append the display text of each issue with a value of 1 into issue_display_list.
+        for issue in issues_list:
+            if issue["value"] == 1:
+                issue_display_list.append(issue["text"])
+
+        print(issue_display_list)
+
+        return jsonify('', render_template('display_info.html', display_info = issue_display_list, headline = "Possible Ethical Issues for " + ingredient_name))
+    
+    # Work if requesting alternatives.
+    else:
+        alternatives_list = gather_ingredient_alternatives_by_key(ingredient_key)
+        
+        return jsonify('', render_template('display_info.html', display_info = alternatives_list, headline = "Possible Alternative Ingredients for " + ingredient_name))
+    
+
 
 
 if __name__ == "__main__":
