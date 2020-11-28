@@ -1,0 +1,41 @@
+{
+    "admin": {
+        "username": "admin",
+        "password": "test",
+        "saved_recipes": [
+            "belgianWaffles",
+            "testmeal-admin"
+        ],
+        "custom_recipe_keys": [
+            "testmeal-admin"
+        ],
+        "testmeal-admin": [
+            "eggs",
+            "salt"
+        ]
+    },
+    "test": {
+        "username": "test",
+        "password": "test",
+        "saved_recipes": [
+            "belgianWaffles",
+            "frenchToast",
+            "Awesome Recipe-test"
+        ],
+        "custom_recipe_keys": [
+            "Awesome Recipe-test"
+        ],
+        "Awesome Recipe-test": [
+            "eggs",
+            "salt",
+            "pepper",
+            "milk"
+        ]
+    },
+    "testcreate": {
+        "username": "testcreate",
+        "password": "test",
+        "saved_recipes": [],
+        "custom_recipe_keys": []
+    }
+}
