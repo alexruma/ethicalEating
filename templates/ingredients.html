@@ -1,21 +1,88 @@
 {% extends "sidebar.html" %}
-
+  
 {% block content %}
 <!--Back button: still have to add link for it-->
 <a href = "#" class = "back_button">&#8249</a>
 
 <h1 class="subheader">Recipe for {{ recipe_name }}</h1>
 
+
 <div class="mainbody">
         {% for key, value in data.items() %}
         <ul class="list">
             {{ value }}
             <div class="div_button">
-                <button>Ethical Issues</button>
-                <button>Potential Alternatives</button>
+                <button class="ethical-issues-btn" value="{{key}}">Ethical Issues</button>
+                <button class="alternatives-btn" value="{{key}}" >Potential Alternatives</button>
             </div>
+            <div class="info_display"></div>
         </ul>
         {% endfor %}
+        <div id="info_display_test">
+            <ul id = "display_list">
+                
+               
+ 
+            </ul>
+        </div>
 </div>
 
+<script type="text/javascript"> 
+
+        // Call AJAX function with ingredient's key and requested info type (Ethical Issues) passed as arguments
+        let ethicalIssueBtns = document.getElementsByClassName('ethical-issues-btn');
+     
+        // Loop through ethicalIssueBtns to assign event listener to each button.
+        for(let i = 0; i < ethicalIssueBtns.length; i++) {
+            ethicalIssueBtns[i].addEventListener("click", function() {
+ 
+            console.log("Clicked index: " + ethicalIssueBtns[i].value);
+            ingredientKey = ethicalIssueBtns[i].value
+
+            displayInfo(ingredientKey, 1)
+             })
+            }
+
+         // Call AJAX function with ingredient's key and requested info type (Alternatives) passed as arguments.
+        let alternativeBtns = document.getElementsByClassName('alternatives-btn');
+     
+        // Loop through  alternativeBtns to assign event listener to each button.
+        for(let i = 0; i <  alternativeBtns.length; i++) {
+            alternativeBtns[i].addEventListener("click", function() {
+ 
+            console.log("Clicked index: " +  alternativeBtns[i].value);
+            ingredientKey =  alternativeBtns[i].value
+
+            displayInfo(ingredientKey, 2)
+             })
+            }
+        
+        
+        // Make AJAX request to retrieve and display ethical issues/ alternative foods.
+        function displayInfo(ingredientKey, infoType){
+            $.ajax({
+              url:"/display_info" ,
+              type: "POST",
+              data: {ingredient_key : ingredientKey,
+                    info_type: infoType
+                    },
+              dataType: "json" ,
+              success: function(newData){
+                let displayDiv = document.getElementById("info_display_test");
+                displayDiv.style.display = "block";
+                
+                // Display returned issues or alternatives.
+                $(info_display_test).replaceWith(newData);
+              }
+            })
+        }
+        
+    </script>
 {% endblock %}
+
+
+<style>
+    #info_display_test{
+        display: none;
+    }
+</style>
