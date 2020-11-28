@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8'>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Ethical Eating</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -14,34 +15,10 @@
 </head>
 
 <body>
-    <header class="mainheader">
-        <div>
-            <h1 class="logo">Ethical Eating</h1>
-        </div>
-    </header>
-    <div class="sidebar">
-
-        <!--Need to specify link for POST request-->
-        <form action= "/login.html" method="POST">
-            <fieldset>
-                <legend>LOGIN</legend>
-                <fieldset>
-                    <label>Username:</label>
-                        <input type="text" placeholder="Enter Username" name="username" required>
-                </fieldset>
-                <br />
-                <fieldset>
-                    <label>Password:</label>
-                        <input type="password" placeholder="Enter Password" name="password" required>
-                </fieldset>
-                <br />
-                <button type="submit" value="Submit" class="button">Submit</button>
-            </fieldset>
-        </form>
-        <a href="/">Home</a>
-        <a href="/create_recipe">Create Recipe</a>
-        <a href="/lucky">I'm Feeling Lucky!</a>
-        <a href="/search-recipe">Recipe Search</a>
+    <!--Sidebar for navigation-->
+    <div class = "sidebar">
+        {% block sidebar %}
+        {% endblock %}
     </div>
         {% block content %}
         {% endblock %}

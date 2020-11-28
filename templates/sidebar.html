@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+    <h1>Ethical Eating</h1>
+    <br>
+
+{% if session['logged_in'] %}
+
+    <form class = "user_form" action= "/logout" method="POST">
+        <header>{{ session["username"] }}</header>
+        <button type="submit" value="logout" class="button">Logout</button>
+    </form>
+    <br>
+    <a href="/">Home</a>
+    <a href="/saved_recipes">Saved Recipes</a>
+    <a href="/recipe_search">Recipe Search</a>
+    <a href="/create_recipe">Create Recipe</a>
+    <a href="/lucky">I'm Feeling Lucky!</a>
+
+{% else %}
+<!-- Not logged in -->
+    <form class = "user_form" action= "/login" method="POST">
+        <header>LOGIN</header>
+        <input type="text" placeholder="Username" name="username" required>
+        <input type="password" placeholder="Password" name="password" required>
+        <br>
+        <button type="submit" name="submit_button" value="create" class="button">Create User</button>
+        <button type="submit" name="submit_button" value="login" class="button">Submit</button>
+    </form>
+    <br>
+    <a href="/">Home</a>
+    <a href="/recipe_search">Recipe Search</a>
+    <a href="/create_recipe">Create Recipe</a>
+    <a href="/lucky">I'm Feeling Lucky!</a>
+{% endif %}
+
+{% endblock %}

@@ -78,9 +78,14 @@ body {
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
-  margin-left: 14%;
-  padding: 1px 16px;
-  height: 1000px;
+  margin-left: 310px;
+  padding: 1px 10px;
+}
+
+/*Style for divs that hold categories*/
+div.categories {
+    width: 90%;
+    padding-top: 10px;
 }
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
@@ -116,14 +121,14 @@ div.content {
 
 /*Generic CSS for interior of the pages*/
 .subheader {
-    margin-left: 245px; /* sidebar width is 200 so I added 15 to give some whitespace */
+    margin-left: 310px; /* sidebar width is 300 so I added 15 to give some whitespace */
     font-size: 28px;
     padding: 0px 10px;
     list-style-type:none;
 }
 
 .mainbody {
-    margin-left: 14%;; /* sidebar width is 200 so I added 15 to give some whitespace */
+    margin-left: 310x; /* sidebar width is 300 so I added 15 to give some whitespace */
     font-size: 14px
 }
 
@@ -157,8 +162,6 @@ div.content {
     grid-template-columns: repeat(4, 1fr);
     width: 75vw;
     height: 75vh;
-    margin-left: 14%; /* sidebar width is 200 so I added 15 to give some whitespace */
-    padding: 0px 10px;
 }
 
 @media screen and (max-width: 60em) {
