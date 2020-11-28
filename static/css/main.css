@@ -6,7 +6,7 @@ body {
 .sidebar {
   margin: 0;
   padding: 0;
-  width: 13%;
+  width: 300px;
   background-color: #ff6600;
   position: fixed;
   height: 100%;
@@ -75,6 +75,35 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
+/*Style for each category user can click on*/
+.tile {
+    height: 400px;
+    width: 550px;
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 2px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 400px;
+    font-size: 90px;
+    font-family: 'Pacifico', cursive;
+}
+/*CSS styles for category tiles*/
+.breakfast {
+    background-color:#3366ff;
+}
+
+.lunch {
+    background-color: #ffcc00;
+}
+
+.dinner {
+    background-color: #cc0000;
+}
+
+.dessert {
+    background-color: #ff66cc;
+}
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
@@ -140,12 +169,14 @@ div.categories {
 }
 
 .list {
-   border-style: double;
-   list-style-type:none;
-   padding:8px;
-   margin:0
-   border-bottom:1px solid #ddd
-   font-size     : 14pt;
+    list-style-type: none;
+    padding; 8px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: auto;
+    border-style: solid;
 }
 
 

@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset='utf-8'>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Ethical Eating</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/main.css') }}">
-    <link rel="icon" href="data:,">
-    <script></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Pacifico&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-</head>
 
+    <title>Ethical Eating</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <body>
     <!--Sidebar for navigation-->
     <div class = "sidebar">
         {% block sidebar %}
         {% endblock %}
     </div>
+    <div class = "content">
         {% block content %}
         {% endblock %}
+    </div>
 </body>
 
 </html>
-
