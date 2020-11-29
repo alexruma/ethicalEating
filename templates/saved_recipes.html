@@ -1,0 +1,29 @@
+{% extends "sidebar.html" %}
+
+{% block content %}
+<h1 class = mainheader>Saved Recipes for {{ session["username"] }}</h1>
+
+    <table class="mainbody">
+        {% for key, name in session['saved_recipes'].items() %}
+            <tr>
+                <td>
+                    <form action="/recipe_ingredients" method="GET">
+                        <input type="hidden" name="meal" value="{{ key }}">
+                        <input class="meal_list_link" name="name" type="submit" value='{{ name }}'>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        {% for key, name in session['custom_saved_recipes'].items() %}
+            <tr>
+                <td>
+                    <form action="/custom_recipe_ingredients" method="GET">
+                        <input type="hidden" name="meal" value="{{ key }}">
+                        <input class="meal_list_link" name="name" type="submit" value='{{ name }}'>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
