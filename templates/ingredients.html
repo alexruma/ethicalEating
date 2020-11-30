@@ -6,7 +6,6 @@
 
 <h1 class="subheader">Recipe for {{ recipe_name }}</h1>
 
-
 <div class="mainbody">
         {% for key, value in data.items() %}
         <ul class="list">
@@ -20,12 +19,25 @@
         {% endfor %}
         <div id="info_display_test">
             <ul id = "display_list">
-                
-               
- 
             </ul>
         </div>
 </div>
+
+{% if session['logged_in'] %}
+    {% if meal_key in session['recipes'] %}
+        <form action="/unsave_recipe" method="POST" class="div_button">
+            <button class="alternatives-btn" value="{{ meal_key }}" name="meal_key">Unsave Recipe</button>
+            <input type ="hidden" name="meal" value="{{ recipe_name }}">
+            <input type ="hidden" name="ingredients" value="{{ data }}">
+        </form>
+    {% else %}
+        <form action="/save_recipe" method="POST" class="div_button">
+            <button class="alternatives-btn" value="{{ meal_key }}" name="meal_key">Save Recipe</button>
+            <input type ="hidden" name="meal" value="{{ recipe_name }}">
+            <input type ="hidden" name="ingredients" value="{{ data }}">
+        </form>
+    {% endif %}
+{% endif %}
 
 <script type="text/javascript"> 
 

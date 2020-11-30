@@ -1,9 +1,7 @@
 import random
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
-from dictionary_parser import gather_full_ingredient_list, gather_ingredient_by_key, gather_meals_by_search, \
-    gather_meals_by_category, gather_ingredients_by_meal, gather_meals, gather_ingredient_issues_by_key, \
-    gather_ingredient_alternatives_by_key
-from user_handler import user_authentication, username_exists, create_new_user
+from dictionary_parser import *
+from user_handler import *
 
 app = Flask(__name__)
 
@@ -33,16 +31,12 @@ def show_results():
 
 @app.route('/lucky', methods=["GET", "POST"])
 def random_recipe():
-    # Dictionary of recipe names
     recipe_dict = gather_meals()
-    # Random key/value from meals.json
     random_key = random.choice(list(recipe_dict.items()))
-    # Display name from random_key
     display_name = random_key[1]
-    # Entry's list of ingredients via gather_ingredients_by_meal, which uses the key value
     ingredients_dict = gather_ingredients_by_meal(random_key[0])
 
-    return render_template('ingredients.html', recipe_name=display_name, data=ingredients_dict)
+    return render_template('ingredients.html', meal_key=random_key[0], recipe_name=display_name, data=ingredients_dict)
 
 
 # Render create-recipe
@@ -60,10 +54,16 @@ def new_recipe():
     ingredient_list = request.form.getlist('checkbox')
     ingredients_dict = {}
 
+    # create a key in case user saves it
+    if session['logged_in']:
+        meal_key = recipe_name.replace(" ", "") + "." + session["username"]
+    else:
+        meal_key = recipe_name.replace(" ", "") + ".guest"
+
     for key in ingredient_list:
         ingredients_dict.update(gather_ingredient_by_key(key))
 
-    return render_template('ingredients.html', recipe_name=recipe_name, data=ingredients_dict)
+    return render_template('ingredients.html', meal_key=meal_key, recipe_name=recipe_name, data=ingredients_dict)
 
 
 # Handle POST request from selecting meal on index page. Will redirect to appropriate recipe list page.
@@ -90,7 +90,16 @@ def recipe_ingredients():
     recipe_name = request.args['name']
     ingredients = gather_ingredients_by_meal(key)
 
-    return render_template('ingredients.html', recipe_name=recipe_name, data=ingredients)
+    return render_template('ingredients.html', meal_key=key, recipe_name=recipe_name, data=ingredients)
+
+
+@app.route("/custom_recipe_ingredients", methods=["GET"])
+def custom_recipe_ingredients():
+    key = request.args['meal']
+    recipe_name = request.args['name']
+    ingredients = load_custom_recipe_ingredients(session["username"], key)
+
+    return render_template('ingredients.html', meal_key=key, recipe_name=recipe_name, data=ingredients)
 
 
 @app.route("/display_info", methods=["POST"])
@@ -134,13 +143,20 @@ def login():
         session.permanent = True
         session['logged_in'] = True
         session["username"] = username
+        session["saved_recipes"] = load_saved_recipes(username)
+        session["custom_saved_recipes"] = load_custom_saved_recipes(username)
+
+        # Create a unified dictionary list
+        session["recipes"] = {}
+        session["recipes"].update(session["saved_recipes"])
+        session["recipes"].update(session["custom_saved_recipes"])
         print("Session created")
 
-        return redirect(url_for('index', session=session))
+        return redirect(request.referrer)
 
     # Add in an error message that username or password was incorrect
 
-    return redirect(url_for('index'))
+    return redirect(request.referrer)
 
 
 @app.route('/create', methods=["GET", "POST"])
@@ -157,13 +173,20 @@ def create_user():
         session.permanent = True
         session['logged_in'] = True
         session["username"] = username
+        session["saved_recipes"] = load_saved_recipes(username)
+        session["custom_saved_recipes"] = load_custom_saved_recipes(username)
+
+        # Create a unified dictionary list
+        session["recipes"] = {}
+        session["recipes"].update(session["saved_recipes"])
+        session["recipes"].update(session["custom_saved_recipes"])
         print("Session created")
 
-        return redirect(url_for('index', session=session))
+        return redirect(request.referrer)
 
     # Add in error message that will appear if username already exists
 
-    return redirect(url_for('index'))
+    return redirect(request.referrer)
 
 
 @app.route('/logout', methods=['GET', 'POST'])
@@ -172,23 +195,74 @@ def logout():
     session.permanent = False
     session['logged_in'] = False
     session.pop('username', None)
-    return redirect(url_for('index'))
+    return redirect(request.referrer)
 
 
 @app.route('/save_recipe', methods=['GET', 'POST'])
 def save_recipe():
-    # Need to call a function to save the recipe name variable to the user.json file. If the request is from a generated
-    # recipe we will need to add name & ingredients. Not sure how we'll be able to differentiate at this point
+    key = request.form['meal_key']
+    recipe_name = request.form['meal']
+    username = session["username"]
 
-    return redirect(url_for('index'))
+    if recipe_exists(key):
+        save_user_recipe(username, key, recipe_name)
+        session["saved_recipes"] = load_saved_recipes(username)
+
+        # Create a unified dictionary list of recipes
+        session["recipes"] = {}
+        session["recipes"].update(session["saved_recipes"])
+        session["recipes"].update(session["custom_saved_recipes"])
+
+        return redirect(request.referrer)
+
+    else:
+        ingredients = request.form['ingredients']
+        save_user_custom_recipe(username, key, recipe_name, ingredients)
+        session["custom_saved_recipes"] = load_custom_saved_recipes(username)
+
+        # Create a unified dictionary list of recipes
+        session["recipes"] = {}
+        session["recipes"].update(session["saved_recipes"])
+        session["recipes"].update(session["custom_saved_recipes"])
+        ingredients = load_custom_recipe_ingredients(session["username"], key)
+
+        return render_template('ingredients.html', meal_key=key, recipe_name=recipe_name, data=ingredients)
+
+
+@app.route('/unsave_recipe', methods=['GET', 'POST'])
+def unsave_recipe():
+    key = request.form['meal_key']
+    name = request.form['meal']
+    username = session["username"]
+
+    if recipe_exists(key):
+        remove_recipe(username, key)
+        session["saved_recipes"] = load_saved_recipes(username)
+
+        # Create a unified dictionary list of recipes
+        session["recipes"] = {}
+        session["recipes"].update(session["saved_recipes"])
+        session["recipes"].update(session["custom_saved_recipes"])
+
+        return redirect(request.referrer)
+
+    else:
+        ingredients = load_custom_recipe_ingredients(session["username"], key)
+
+        remove_custom_recipe(username, key)
+        session["custom_saved_recipes"] = load_custom_saved_recipes(username)
+
+        # Create a unified dictionary list of recipes
+        session["recipes"] = {}
+        session["recipes"].update(session["saved_recipes"])
+        session["recipes"].update(session["custom_saved_recipes"])
+
+        return render_template('ingredients.html', meal_key=key, recipe_name=name, data=ingredients)
 
 
 @app.route('/saved_recipes', methods=['GET', 'POST'])
 def saved_recipes():
-    # Need a function that parses the user.json for all recipe names and loads a page. Once again will need to think
-    # about how we are then loading the ingredients for custom recipes.
-
-    return redirect(url_for('index'))
+    return render_template('saved_recipes.html')
 
 
 if __name__ == "__main__":

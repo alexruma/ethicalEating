@@ -2,40 +2,43 @@
     "admin": {
         "username": "admin",
         "password": "test",
-        "saved_recipes": [
-            "belgianWaffles",
-            "testmeal-admin"
-        ],
-        "custom_recipe_keys": [
-            "testmeal-admin"
-        ],
-        "testmeal-admin": [
-            "eggs",
-            "salt"
-        ]
+        "recipe_keys": {
+            "buttermilkPancakes": "Buttermilk Pancakes",
+            "belgianWaffles": "Belgian Waffles",
+            "veggieOmelet": "Veggie Omelet",
+            "sweetCrepes": "Sweet Crepes"
+        },
+        "custom_recipe_keys": {}
     },
     "test": {
         "username": "test",
         "password": "test",
-        "saved_recipes": [
-            "belgianWaffles",
-            "frenchToast",
-            "Awesome Recipe-test"
-        ],
-        "custom_recipe_keys": [
-            "Awesome Recipe-test"
-        ],
+        "recipe_keys": {
+            "belgianWaffles": "Belgian Waffles",
+            "frenchToast": "French Toast"
+        },
+        "custom_recipe_keys": {
+            "Awesome Recipe-test": "Awesome Recipe"
+        },
         "Awesome Recipe-test": [
             "eggs",
             "salt",
-            "pepper",
+            "blackPepper",
             "milk"
         ]
     },
     "testcreate": {
         "username": "testcreate",
         "password": "test",
-        "saved_recipes": [],
-        "custom_recipe_keys": []
+        "recipe_keys": {},
+        "custom_recipe_keys": {}
+    },
+    "Testing": {
+        "username": "Testing",
+        "password": "test",
+        "recipe_keys": {
+            "blackbeanBurger": "Black Bean Avocado Burger"
+        },
+        "custom_recipe_keys": {}
     }
 }

@@ -2,6 +2,19 @@ import os
 from json_handler import JSONHandler
 
 
+def recipe_exists(recipe_key):
+    path = os.path.join(os.path.dirname(__file__), 'resources', 'meals.json')
+
+    json = JSONHandler(path)
+    json_dict = json.read_json()
+
+    for key in json_dict:
+        if recipe_key == key:
+            return True
+
+    return False
+
+
 def gather_meals():
     """
     When on the randomizer page, will gather all meals in our database return dictionary list with all meals.
@@ -81,6 +94,7 @@ def gather_ingredient_by_key(key: str):
 
     return ingredient
 
+
 def gather_ingredient_issues_by_key(key: str):
     """
     Returns a list of dicts of ethical issues for a specific ingredient.
@@ -106,6 +120,7 @@ def gather_ingredient_issues_by_key(key: str):
     
     return issues_list
 
+
 def gather_ingredient_alternatives_by_key(key: str):
     """
     Returns a list of alternatives for for a specific ingredient.
@@ -118,11 +133,9 @@ def gather_ingredient_alternatives_by_key(key: str):
     ingredient_json = JSONHandler(ingredient_path)
     ingredient_json_dict = ingredient_json.read_json()
 
-    alternatives =  ingredient_json_dict[key]["Ethical Alternatives"]
+    alternatives = ingredient_json_dict[key]["Ethical Alternatives"]
 
     return alternatives
-
-
 
 
 def gather_ingredients_by_meal(meal: str):
@@ -135,8 +148,6 @@ def gather_ingredients_by_meal(meal: str):
     [sugar, White Sugar],
     [redPepper, Red Pepper]]
     """
-
-    # TODO add in ethical alternative information into the return so that we can un-grey the symbols if its present.
 
     meal_path = os.path.join(os.path.dirname(__file__), 'resources', 'meals.json')
     ingredient_path = os.path.join(os.path.dirname(__file__), 'resources', 'ingredients.json')
