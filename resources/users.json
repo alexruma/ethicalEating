@@ -40,5 +40,21 @@
             "blackbeanBurger": "Black Bean Avocado Burger"
         },
         "custom_recipe_keys": {}
+    },
+    "alexruma": {
+        "username": "alexruma",
+        "password": "boo",
+        "recipe_keys": {},
+        "custom_recipe_keys": {
+            "Sandwich.alexruma": "Sandwich"
+        },
+        "Sandwich.alexruma": [
+            "cheddarCheese",
+            "onion",
+            "salsa",
+            "whiteBread",
+            "garlic",
+            "blackBeanBurger"
+        ]
     }
 }
