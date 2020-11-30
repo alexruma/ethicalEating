@@ -133,9 +133,20 @@ def gather_ingredient_alternatives_by_key(key: str):
     ingredient_json = JSONHandler(ingredient_path)
     ingredient_json_dict = ingredient_json.read_json()
 
-    alternatives = ingredient_json_dict[key]["Ethical Alternatives"]
+    # List storing key value of alternative ingredients.
+    alternatives_key = ingredient_json_dict[key]["Ethical Alternatives"]
+    
+    # List that will store display name value of alternative ingredients.
+    alternatives_name = []
 
-    return alternatives
+    for key in alternatives_key:
+        # Return list of dicts {key:name} for each ingredient.
+        key_dict = gather_ingredient_by_key(key)
+        # Append just the first value (the display name) from each dict.
+        alternatives_name.append(next(iter(key_dict.values())))
+
+
+    return alternatives_name
 
 
 def gather_ingredients_by_meal(meal: str):
