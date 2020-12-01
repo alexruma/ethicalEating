@@ -114,10 +114,6 @@
     "Animal Product": 0,
     "Ethical Alternatives": [
         ""
-    ],
-    "Categories": [
-        "Lunch",
-        "Dinner"
     ]
 },
   "blackPepper": {
@@ -257,7 +253,7 @@
         ""
     ],
     "Animal Product": 0
-},
+  },
 
   "cornTortillas": {
       "Display Name": "Corn Tortillas",
@@ -281,7 +277,7 @@
     "Animal Product": 1
 },
   "cucumber": {
-    "Display Name": "Cubumber",
+    "Display Name": "Cucumber",
     "Water Issue": 0,
     "CO2 Issue": 0,
     "Ethical Alternatives": [
@@ -346,14 +342,8 @@
     "Animal Product": 0,
     "Ethical Alternatives": [
         ""
-    ],
-    "Categories": [
-        "Breakfat",
-        "Lunch",
-        "Dinner",
-        "Spices"
     ]
-},
+  },
 
   "granola": {
       "Display Name": "Granola",
@@ -400,11 +390,6 @@
         "blackBeanBurger",
         "refriedBeans",
         "veggieSausagePatty"
-    ],
-    "Categories": [
-        "Lunch",
-        "Dinner",
-        "Meat"
     ]
 },
   "ham": {
@@ -770,7 +755,7 @@
     "CO2 Issue": 1,
     "Ethical Alternatives": [
         "millet", 
-        "buckwheat",
+        "buckWheat",
         "quinoa",
         "sorghum"
     ],
@@ -868,11 +853,8 @@
     "CO2 Issue": 1,
     "Animal Product": 1,
     "Ethical Alternatives": [
-        "grilledChicketn",
+        "grilledChicken",
         "veggieSausagePatty"
-    ],
-    "Categories": [
-        "Dinner"
     ]
 },
 
@@ -899,9 +881,9 @@
       "Water Issue": 1,
       "CO2 Issue": 0,
       "Ethical Alternatives": [
-          "Stevia",
-          "Honey",
-          "Brown Sugar"
+          "stevia",
+          "honey",
+          "brownSugar"
       ],
       "Animal Product": 0
   },
@@ -929,7 +911,7 @@
       "Water Issue": 1,
       "CO2 Issue": 0,
       "Ethical Alternatives": [
-          ""
+          "mapleSyrup"
       ],
       "Animal Product": 0
   },
@@ -958,10 +940,6 @@
     "Animal Product": 0,
     "Ethical Alternatives": [
         ""
-    ],
-    "Categories": [
-        "Lunch",
-        "Breakfast"
     ]
 },
 
@@ -1033,7 +1011,7 @@
   },
     "wholeWheatLasagna": {
       "Display Name": "Whole Wheat Lasagna",
-      "Water  Issue": 1,
+      "Water Issue": 1,
       "CO2 Issue": 0,
       "Ethical Alternatives": [
          ""
