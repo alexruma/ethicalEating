@@ -83,7 +83,7 @@
       "Ethical Alternatives": [
         "grilledChicken",
         "veggieSausage",
-        "VeggieSausagePatty"
+        "veggieSausagePatty"
       ],
       "Animal Product": 1
   },
@@ -933,6 +933,15 @@
       ],
       "Animal Product": 0
   },
+  "veggieSausage": {
+    "Display Name": "Veggie Sausage",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Animal Product": 0,
+    "Ethical Alternatives": [
+        ""
+    ]
+},
   "veggieSausagePatty": {
     "Display Name": "Veggie Sausage Patty",
     "Water Issue": 0,
