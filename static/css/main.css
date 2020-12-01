@@ -230,7 +230,7 @@ div.categories {
     grid-column-end: 5;
     -ms-grid-row: 1;
     grid-row: 1;
-    background:rgb(199,80,199);
+    background:rgb(150, 235, 80);
     font-family: "Garamond";
     font-weight: bold;
     text-align: center;
@@ -253,7 +253,7 @@ div.categories {
     grid-column-end: 3;
     -ms-grid-row: 2;
     grid-row: 2;
-    background:rgb(250, 37, 37);
+    background:rgb(150, 235, 80);
     font-family: "Garamond";
     font-weight: bold;
     text-align: center;
@@ -275,7 +275,7 @@ div.categories {
     grid-column-end: 5;
     -ms-grid-row: 2;
     grid-row: 2;
-    background:green;
+    background:orange;
     font-family: "Garamond";
     font-weight: bold;
     text-align: center;
@@ -299,8 +299,8 @@ div.categories {
     padding: 0;
     border: none;
     background: none;
-    font-weight: bold;
-    font-family: 'Times New Roman'; /*font style of each menu*/
+    font-weight: lighter;
+    font-family: 'Fjalla One', sans-serif; /*font style of each menu*/
     font-size: 16px;
 }
 
@@ -314,9 +314,9 @@ div.categories {
     border: none;
     background: none;
     font-weight: bold;
-    font-family:'Playfair Display', serif;
-    font-size:27px;
-    color: #993300;
+    font-family:'Fjalla One', serif;
+    font-size:25px;
+    color: #131212;
 }
 
 .meal_list_link_f:hover {
@@ -326,7 +326,7 @@ div.categories {
 .tooltiptext {
     visibility: hidden;
     width: 120px;
-    background-color: #4169e1;
+    background-color: #46AF50;
     color: #fff;
     text-align: center;
     border-radius: 6px;

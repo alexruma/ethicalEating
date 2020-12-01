@@ -32,7 +32,9 @@
       "Water Issue": 1,
       "CO2 Issue": 1,
       "Ethical Alternatives": [
-          "veggieSausage"
+          "veggieSausage",
+          "veggieSausagePatty",
+          "grilledChicken"
       ],
       "Animal Product": 1
   },
@@ -54,6 +56,38 @@
       ],
       "Animal Product": 0
   },
+  "basil": {
+    "Display Name": "Basil",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+  },
+
+  "bayLeaves": {
+    "Display Name": "Bay Leaves",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+   },
+
+   "beef": {
+      "Display Name": "Beef",
+      "Water Issue": 1,
+      "CO2 Issue": 1,
+      "Ethical Alternatives": [
+        "grilledChicken",
+        "veggieSausage",
+        "VeggieSausagePatty"
+      ],
+      "Animal Product": 1
+  },
+
   "biscuits": {
       "Display Name": "Biscuits",
       "Water Issue": 0,
@@ -72,6 +106,16 @@
       ],
       "Animal Product": 0
   },
+
+  "blackBeanBurger": {
+    "Display Name": "Black Bean Burger",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Animal Product": 0,
+    "Ethical Alternatives": [
+        ""
+    ]
+},
   "blackPepper": {
       "Display Name": "Black Pepper",
       "Water Issue": 0,
@@ -108,6 +152,15 @@
       ],
       "Animal Product": 0
   },
+  "buckWheat": {
+    "Display Name": "Buck Wheat",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+  },
   "butter": {
       "Display Name": "Butter",
       "Water Issue": 1,
@@ -126,6 +179,16 @@
       ],
       "Animal Product": 0
   },
+  "carrot": {
+    "Display Name": "Carrot",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+},
+
   "cayennePepper": {
       "Display Name": "Cayenne Pepper",
       "Water Issue": 0,
@@ -135,12 +198,22 @@
       ],
       "Animal Product": 0
   },
+   "celery": {
+     "Display Name": "Celery",
+     "Water Issue": 0,
+     "CO2 Issue": 0,
+     "Ethical Alternatives": [
+        ""
+     ],
+     "Animal Product": 0
+  },
   "cheddarCheese": {
       "Display Name": "Cheddar Cheese",
       "Water Issue": 1,
       "CO2 Issue": 1,
       "Ethical Alternatives": [
-        "veganCheese"
+        "veganCheese",
+        "mozzarellaCheese"
       ],
       "Animal Product": 1
   },
@@ -156,9 +229,10 @@
   "chocolateChips": {
       "Display Name": "Chocolate Chips",
       "Water Issue": 1,
-      "CO2 Issue": 0,
+      "CO2 Issue": 1,
       "Ethical Alternatives": [
-          ""
+          "whiteChocolateChips",
+          "peanutButterChips"
       ],
       "Animal Product": 0
   },
@@ -171,6 +245,16 @@
       ],
       "Animal Product": 0
   },
+  "coconutCream": {
+    "Display Name": "Coconut Cream",
+    "Water Issue": 1,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+  },
+
   "cornTortillas": {
       "Display Name": "Corn Tortillas",
       "Water Issue": 1,
@@ -180,6 +264,38 @@
       ],
       "Animal Product": 0
   },
+
+  "creamCheese": {
+    "Display Name": "Cream Cheese",
+    "Water Issue": 1,
+    "CO2 Issue": 1,
+    "Ethical Alternatives": [
+        "coconutCream",
+        "veganCheese",
+        "soyCreamCheese"
+    ],
+    "Animal Product": 1
+},
+  "cucumber": {
+    "Display Name": "Cucumber",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+},
+
+"dill": {
+    "Display Name": "Dill",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+},
+
   "eggs": {
       "Display Name": "Eggs",
       "Water Issue": 1,
@@ -189,6 +305,7 @@
       ],
       "Animal Product": 0
   },
+  
   "englishMuffin": {
       "Display Name": "English Muffin",
       "Water Issue": 1,
@@ -198,15 +315,36 @@
       ],
       "Animal Product": 0
   },
+  "fetaCheese": {
+    "Display Name": "Feta Cheese",
+    "Water Issue": 1,
+    "CO2 Issue": 1,
+    "Ethical Alternatives": [
+        "veganCheese"
+    ],
+    "Animal Product": 1
+},
+
   "flour": {
-      "Display Name": "Flour",
+      "Display Name": "White Flour",
       "Water Issue": 1,
       "CO2 Issue": 0,
       "Ethical Alternatives": [
-          ""
+          "wholeWheatFlour",
+          "quinoaFlour"
       ],
       "Animal Product": 0
   },
+  "garlic": {
+    "Display Name": "Garlic",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Animal Product": 0,
+    "Ethical Alternatives": [
+        ""
+    ]
+  },
+
   "granola": {
       "Display Name": "Granola",
       "Water Issue": 1,
@@ -234,15 +372,50 @@
       ],
       "Animal Product": 0
   },
+  "groundBeefBurger": {
+    "Display Name": "Ground Beef Burger",
+    "Water Issue": 1,
+    "CO2 Issue": 1,
+    "Animal Product": 1,
+    "Ethical Alternatives": [
+        "blackBeanBurger"
+    ]
+},
+"grilledChicken": {
+    "Display Name": "Grilled Chicken",
+    "Water Issue": 0,
+    "CO2 Issue": 1,
+    "Animal Product": 1,
+    "Ethical Alternatives": [
+        "blackBeanBurger",
+        "refriedBeans",
+        "veggieSausagePatty"
+    ]
+},
   "ham": {
       "Display Name": "Ham",
       "Water Issue": 1,
       "CO2 Issue": 1,
       "Ethical Alternatives": [
-          ""
-      ],
+          "grilledChicken",
+          "veggieSausage",
+          "veggieSausagePatty"
+       ],
       "Animal Product": 1
   },
+
+   "heavyCream": {
+      "Display Name": "heavy Cream",
+      "Water Issue": 1,
+      "CO2 Issue": 1,
+      "Ethical Alternatives": [
+        "coconutCream",
+        "almondMilk"
+     ],
+     "Animal Product": 1
+},
+
+
   "honey": {
       "Display Name": "Honey",
       "Water Issue": 1,
@@ -252,6 +425,77 @@
       ],
       "Animal Product": 0
   },
+
+
+  "kidneyBeans": {
+     "Display Name": "Kidney Beans",
+     "Water Issue": 1,
+     "CO2 Issue": 0,
+     "Ethical Alternatives": [
+        ""
+     ],
+     "Animal Product": 0
+ },
+
+  "lamb": {
+    "Display Name": "Lamb",
+    "Water Issue": 1,
+    "CO2 Issue": 1,
+    "Ethical Alternatives": [
+        "grilledChicken",
+        "veggieSausage",
+        "veggieSausagePatty"
+    ],
+    "Animal Product": 1
+   },
+   "lasagnaSheets": {
+    "Display Name": "Lasagna Sheets",
+    "Water Issue": 1,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        "wholeWheatLasagna"
+    ],
+    "Animal Product": 0
+   },
+
+   "leek": {
+    "Display Name": "Leek",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+    }, 
+
+  "lemon": {
+    "Display Name": "Lemon",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+  },
+  "lentil": {
+    "Display Name": "Lentil",
+    "Water Issue": 1,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        "kidneyBeans"
+     ],
+     "Animal Product": 0
+  },
+  "lettuce": {
+    "Display Name": "Lettuce",
+    "Water Issue": 1,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+  },
+
   "mapleSyrup": {
       "Display Name": "Maple Syrup",
       "Water Issue": 0,
@@ -261,7 +505,16 @@
       ],
       "Animal Product": 0
   },
-  "milk": {
+  "millet": {
+    "Display Name": "Millet",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+  },
+   "milk": {
       "Display Name": "Milk",
       "Water Issue": 1,
       "CO2 Issue": 1,
@@ -269,6 +522,25 @@
           "almondMilk"
       ],
       "Animal Product": 1
+  },
+
+  "mint": {
+    "Display Name": "Mint",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+  },
+  "mozzarellaCheese": {
+    "Display Name": "Mozzarella Cheese",
+    "Water Issue": 1,
+    "CO2 Issue": 1,
+    "Ethical Alternatives": [
+        "veganCheese"
+    ],
+    "Animal Product": 1
   },
   "mushrooms": {
       "Display Name": "Mushrooms",
@@ -297,6 +569,15 @@
       ],
       "Animal Product": 0
   },
+  "oliveOil": {
+    "Display Name": "Olive Oil",
+    "Water Issue": 1,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+  },
   "onion": {
       "Display Name": "Onions",
       "Water Issue": 1,
@@ -306,7 +587,16 @@
       ],
       "Animal Product": 0
   },
-  "paprika": {
+  "oregano": {
+    "Display Name": "Oregano",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+  },
+   "paprika": {
       "Display Name": "Paprika",
       "Water Issue": 1,
       "CO2 Issue": 0,
@@ -315,6 +605,17 @@
       ],
       "Animal Product": 0
   },
+   "parmesanCheese": {
+      "Display Name": "Parmesan Cheese",
+      "Water Issue": 1,
+      "CO2 Issue": 1,
+      "Ethical Alternatives": [
+        "veganCheese",
+        "mozzarellaCheese"
+      ],
+      "Animal Product": 1
+  },
+
   "parsley": {
       "Display Name": "Parsley",
       "Water Issue": 1,
@@ -324,6 +625,16 @@
       ],
       "Animal Product": 0
   },
+
+  "peanutButterChips": {
+    "Display Name": "Peanut Butter Chips",
+    "Water Issue": 1,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+},
   "pepperJackCheese": {
       "Display Name": "Pepper Jack Cheese",
       "Water Issue": 1,
@@ -342,6 +653,36 @@
       ],
       "Animal Product": 0
   },
+   "pineNuts": {
+    "Display Name": "Pine Nuts",
+    "Water Issue": 1,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+      "pistachio"
+    ],
+    "Animal Product": 0
+  },
+   "pistachio": {
+      "Display Name": "Pistachios",
+      "Water Issue": 0,
+      "CO2 Issue": 0,
+      "Ethical Alternatives": [
+        ""
+      ],
+      "Animal Product": 0
+  },
+
+  "pork": {
+    "Display Name": "Pork",
+    "Water Issue": 1,
+    "CO2 Issue": 1,
+    "Ethical Alternatives": [
+        "grilledChicken",
+        "veggieSausage",
+        "veggieSausagePatty"
+    ],
+    "Animal Product": 1
+},
   "potatoes": {
       "Display Name": "Potatoes",
       "Water Issue": 0,
@@ -351,6 +692,26 @@
       ],
       "Animal Product": 0
   },
+
+  "quinoa": {
+    "Display Name": "Quinoa",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+},
+  "quinoaFlour": {
+    "Display Name": "Quinoa Flour",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+},
+
   "redBellPepper": {
       "Display Name": "Red Bell Peppers",
       "Water Issue": 1,
@@ -369,6 +730,16 @@
       ],
       "Animal Product": 0
   },
+
+  "redWine": {
+    "Display Name": "Red Wine",
+    "Water Issue": 1,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+},
   "refriedBeans": {
       "Display Name": "Refried Beans",
       "Water Issue": 1,
@@ -378,6 +749,28 @@
       ],
       "Animal Product": 0
   },
+  "rice": {
+    "Display Name": "Rice",
+    "Water Issue": 1,
+    "CO2 Issue": 1,
+    "Ethical Alternatives": [
+        "millet", 
+        "buckWheat",
+        "quinoa",
+        "sorghum"
+    ],
+    "Animal Product": 0
+},
+"ricottaCheese": {
+    "Display Name": "Ricotta Cheese",
+    "Water Issue": 1,
+    "CO2 Issue": 1,
+    "Ethical Alternatives": [
+        "veganCheese"
+    ],
+    "Animal Product": 1
+},
+
   "salsa": {
       "Display Name": "Salsa",
       "Water Issue": 1,
@@ -399,21 +792,51 @@
   "sausage": {
       "Display Name": "Sausage",
       "Water Issue": 1,
-      "CO2 Issue": 0,
+      "CO2 Issue": 1,
       "Ethical Alternatives": [
-          "veggieSausagePatty"
+          "veggieSausagePatty",
+          "veggieSausage"
       ],
       "Animal Product": 1
   },
   "sausagePatties": {
       "Display Name": "Sausage Patties",
       "Water Issue": 1,
-      "CO2 Issue": 0,
+      "CO2 Issue": 1,
       "Ethical Alternatives": [
           "veggieSausagePatty"
       ],
-      "Animal Product": 0
+      "Animal Product": 1
   },
+  "sorghum": {
+     "Display Name": "Sorghum",
+     "Water Issue": 0,
+     "CO2 Issue": 0,
+     "Ethical Alternatives": [
+        ""
+     ],
+     "Animal Product": 0
+  },
+
+  "sourCream": {
+    "Display Name": "Sour Cream",
+    "Water Issue": 1,
+    "CO2 Issue": 1,
+    "Animal Product": 1,
+    "Ethical Alternatives": [
+        "veganCheese",
+        "coconutCream"
+    ]
+},
+  "soyCreamCheese": {
+    "Display Name": "Soy Cream Cheese",
+    "Water Issue": 1,
+    "CO2 Issue": 0,
+    "Animal Product": 0,
+    "Ethical Alternatives": [
+        "veganCheese"
+    ]
+},
   "spinach": {
       "Display Name": "Spinach",
       "Water Issue": 1,
@@ -423,6 +846,27 @@
       ],
       "Animal Product": 0
   },
+
+  "steak": {
+    "Display Name": "Steak",
+    "Water Issue": 1,
+    "CO2 Issue": 1,
+    "Animal Product": 1,
+    "Ethical Alternatives": [
+        "grilledChicken",
+        "veggieSausagePatty"
+    ]
+},
+
+  "stevia": {
+    "Display Name": "Stevia",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+},
   "strawberries": {
       "Display Name": "Strawberries",
       "Water Issue": 1,
@@ -437,10 +881,22 @@
       "Water Issue": 1,
       "CO2 Issue": 0,
       "Ethical Alternatives": [
-          ""
+          "stevia",
+          "honey",
+          "brownSugar"
       ],
       "Animal Product": 0
   },
+
+  "thyme": {
+    "Display Name": "Thyme",
+    "Water Issue": 1,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+},
   "tomatoes": {
       "Display Name": "Tomatoes",
       "Water Issue": 1,
@@ -455,9 +911,18 @@
       "Water Issue": 1,
       "CO2 Issue": 0,
       "Ethical Alternatives": [
-          ""
+          "mapleSyrup"
       ],
       "Animal Product": 0
+  },
+ "veganCheese": {
+    "Display Name": "Vegan Cheese",
+    "Water Issue":0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
   },
   "vegetableOil": {
       "Display Name": "Vegetable Oil",
@@ -468,6 +933,26 @@
       ],
       "Animal Product": 0
   },
+  "veggieSausagePatty": {
+    "Display Name": "Veggie Sausage Patty",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Animal Product": 0,
+    "Ethical Alternatives": [
+        ""
+    ]
+},
+
+  "vinegar": {
+    "Display Name": "Vinegar",
+    "Water Issue": 1,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+},
+
   "water": {
       "Display Name": "Water",
       "Water Issue": 1,
@@ -482,10 +967,59 @@
       "Water Issue": 0,
       "CO2 Issue": 0,
       "Ethical Alternatives": [
-          ""
+          "wholeWheatBread"
       ],
       "Animal Product": 0
   },
+  "whiteChocolateChips": {
+    "Display Name": "White Chocolate Chips",
+    "Water Issue":0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+},
+
+  "wholeWheatBread": {
+    "Display Name": "Whole Wheat Bread",
+    "Water Issue": 1,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+},
+
+"wholeWheatBun": {
+    "Display Name": "Whole Wheat Bun",
+    "Water Issue": 0,
+    "CO2 Issue": 0,
+    "Ethical Alternatives": [
+        ""
+    ],
+    "Animal Product": 0
+},
+   "wholeWheatFlour": {
+      "Display Name": "Whole Wheat Flour",
+      "Water  Issue": 1,
+      "CO2 Issue": 0,
+      "Ethical Alternatives": [
+        "quinoaFlour"
+      ],
+    "Animal Product": 0
+  },
+    "wholeWheatLasagna": {
+      "Display Name": "Whole Wheat Lasagna",
+      "Water Issue": 1,
+      "CO2 Issue": 0,
+      "Ethical Alternatives": [
+         ""
+      ],
+     "Animal Product": 0
+  },
+
+
   "wholeWheatTortillas": {
       "Display Name": "Whole Wheat Tortillas",
       "Water Issue": 0,
@@ -495,145 +1029,23 @@
       ],
       "Animal Product": 0
   },
-  "yogurt": {
-      "Display Name": "Yogurt",
-      "Water Issue": 1,
-      "CO2 Issue": 1,
-      "Ethical Alternatives": [
-          "almondMilk"
-      ],
-      "Animal Product": 1
-  },
-  "grilledChicken": {
-      "Display Name": "Grilled Chicken",
-      "Water Issue": 0,
-      "CO2 Issue": 1,
-      "Animal Product": 1,
-      "Ethical Alternatives": [
-          "blackBeanBurger",
-          "refriedBeans"
-      ],
-      "Categories": [
-          "Lunch",
-          "Dinner",
-          "Meat"
-      ]
-  },
-  "sourCream": {
-      "Display Name": "Sour Cream",
-      "Water Issue": 1,
-      "CO2 Issue": 1,
-      "Animal Product": 1,
-      "Ethical Alternatives": [
-          "veganCheese"
-      ],
-      "Categories": [
-          "Breakfat",
-          "Lunch",
-          "Dinner",
-          "Dairy"
-      ]
-  },
-  "garlic": {
-      "Display Name": "Garlic",
-      "Water Issue": 0,
-      "CO2 Issue": 0,
-      "Animal Product": 0,
-      "Ethical Alternatives": [
-          ""
-      ],
-      "Categories": [
-          "Breakfat",
-          "Lunch",
-          "Dinner",
-          "Spices"
-      ]
-  },
-  "steak": {
-      "Display Name": "Steak",
-      "Water Issue": 1,
-      "CO2 Issue": 1,
-      "Animal Product": 1,
-      "Ethical Alternatives": [
-          ""
-      ],
-      "Categories": [
-          "Dinner"
-      ]
-  },
-  "blackBeanBurger": {
-      "Display Name": "Black Bean Burger",
-      "Water Issue": 0,
-      "CO2 Issue": 0,
-      "Animal Product": 0,
-      "Ethical Alternatives": [
-          ""
-      ],
-      "Categories": [
-          "Lunch",
-          "Dinner"
-      ]
-  },
-  "groundBeefBurger": {
-      "Display Name": "Ground Beef Burger",
-      "Water Issue": 1,
-      "CO2 Issue": 1,
-      "Animal Product": 1,
-      "Ethical Alternatives": [
-          "blackBeanBurger"
-      ],
-      "Categories": [
-          "Lunch",
-          "Dinner"
-      ]
-  },
-  "veggieSausagePatty": {
-      "Display Name": "Veggie Sausage Patty",
-      "Water Issue": 0,
-      "CO2 Issue": 0,
-      "Animal Product": 0,
-      "Ethical Alternatives": [
-          ""
-      ],
-      "Categories": [
-          "Lunch",
-          "Breakfast"
-      ]
-  },
-  "wholeWheatBun": {
-    "Display Name": "Whole Wheat Bun",
-    "Water Issue": 0,
-    "CO2 Issue": 0,
-    "Ethical Alternatives": [
-        ""
-    ],
-    "Animal Product": 0
-},
-"oliveOil": {
-  "Display Name": "Olive Oil",
-  "Water Issue": 1,
-  "CO2 Issue": 0,
-  "Ethical Alternatives": [
-      ""
-  ],
-  "Animal Product": 0
-},
-"lettuce": {
-  "Display Name": "Lettuce",
-  "Water Issue": 1,
-  "CO2 Issue": 0,
-  "Ethical Alternatives": [
-      ""
-  ],
-  "Animal Product": 0
-},
-"veganCheese": {
-    "Display Name": "Vegan Cheese",
+  "worcestershirSauce": {
+    "Display Name": "Worcestershir Sauce",
     "Water Issue":0,
     "CO2 Issue": 0,
     "Ethical Alternatives": [
         ""
     ],
     "Animal Product": 0
-}
+},
+ "yogurt": {
+      "Display Name": "Yogurt",
+      "Water Issue": 1,
+      "CO2 Issue": 1,
+      "Ethical Alternatives": [
+          "almondMilk",
+          "greekYogurt"
+      ],
+      "Animal Product": 1
+  }
 }

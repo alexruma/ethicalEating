@@ -565,5 +565,434 @@
       "blackBeanBurger",
       "wholeWheatBun"
     ]
-  }
+  },
+
+  "greekSpinachPie": {
+    "Display Name": "Greek Spinach Pie",
+    "Search Terms": [
+      "greek",
+      "spinach",
+      "pie",
+      "greekpie",
+      "fetacheese"
+    ],
+    "Breakfast": 0,
+    "Lunch": 1,
+    "Dinner": 1,
+    "Dessert": 0,
+    "Ingredients": [
+      "pieCrust",
+      "oliveOil",
+      "spinach",
+      "fetaCheese",
+      "onion",
+      "parsley",
+      "blackPepper",
+      "eggs"
+    ]
+  },
+  "greekCucumberDip": {
+    "Display Name": "Greek Cucumber Dip",
+    "Search Terms": [
+      "greek",
+      "dip",
+      "veggiedip",
+      "greekYogurt",
+      "greekpie",
+      "sourCream"
+    ],
+    "Breakfast": 0,
+    "Lunch": 1,
+    "Dinner": 1,
+    "Dessert": 0,
+    "Ingredients": [
+      "vinegar",
+      "oliveOil",
+      "garlic",
+      "salt",
+      "greekYogurt",
+      "sourCream",
+      "blackPepper",
+      "cucumber"
+    ]
+  },
+   "greekLambStew": {
+  "Display Name": "Greek Lamb Stew",
+  "Search Terms": [
+    "greek",
+    "lamb",
+    "stew",
+    "greekstew",
+    "lamb"
+  ],
+  "Breakfast": 0,
+  "Lunch": 1,
+  "Dinner": 1,
+  "Dessert": 0,
+  "Ingredients": [
+    "lamb",
+    "oliveOil",
+    "garlic",
+    "onion",
+    "salt",
+    "tomatoes",
+    "potatoes",
+    "parsley",
+    "mint",
+    "dill"
+  ]
+},
+  "greekPorkSkewers": {
+  "Display Name": "Greek Pork Skewers",
+  "Search Terms": [
+    "greek",
+    "greekskewers",
+    "pork",
+    "skewers"
+  ],
+  "Breakfast": 0,
+  "Lunch": 1,
+  "Dinner": 1,
+  "Dessert": 0,
+  "Ingredients": [
+    "pork",
+    "oliveOil",
+    "garlic",
+    "redWine",
+    "salt",
+    "lemon",
+    "parsley",
+    "mint",
+    "oregano"
+  ]
+},
+"greekbeefrisotto": {
+  "Display Name": "Greek Beef Risotto",
+  "Search Terms": [
+    "greek",
+    "beef",
+    "risotto",
+    "beefrisotto",
+    "rice"
+  ],
+  "Breakfast": 0,
+  "Lunch": 1,
+  "Dinner": 1,
+  "Dessert": 0,
+  "Ingredients": [
+    "beef",
+    "oliveOil",
+    "garlic",
+    "redWine",
+    "salt",
+    "onion",
+    "garlic",
+    "tomatoes",
+    "sugar",
+    "rice",
+    "carrot"
+  ]
+},
+"spaghettiCarbonara": {
+  "Display Name": "Spaghetti Carbonara",
+  "Search Terms": [
+    "italian",
+    "pasta",
+    "spaghetti",
+    "creamy",
+    "carbonara"
+  ],
+  "Breakfast": 0,
+  "Lunch": 1,
+  "Dinner": 1,
+  "Dessert": 0,
+  "Ingredients": [
+    "flour",
+    "parmesanCheese",
+    "garlic",
+    "redWine",
+    "salt",
+    "eggs",
+    "garlic",
+    "blackPepper"
+  ]
+},
+"ricottaRavioli": {
+  "Display Name": "Ricotta Ravioli",
+  "Search Terms": [
+    "italian",
+    "pasta",
+    "ravioli",
+    "creamy",
+    "ricotta"
+  ],
+  "Breakfast": 0,
+  "Lunch": 1,
+  "Dinner": 1,
+  "Dessert": 0,
+  "Ingredients": [
+    "flour",
+    "parmesanCheese",
+    "garlic",
+    "salt",
+    "eggs",
+    "garlic",
+    "blackPepper",
+    "ricottaCheese",
+    "parmesanCheese",
+    "butter",
+    "nutmeg",
+    "basil"
+  ]
+},
+"pastaWithBasilPesto": {
+  "Display Name": "Pasta With Basil Pesto",
+  "Search Terms": [
+    "italian",
+    "pasta",
+    "pesto",
+    "basil",
+    "parmesan"
+  ],
+  "Breakfast": 0,
+  "Lunch": 1,
+  "Dinner": 1,
+  "Dessert": 0,
+  "Ingredients": [
+    "flour",
+    "parmesanCheese",
+    "garlic",
+    "salt",
+    "eggs",
+    "blackPepper",
+    "pineNuts",
+    "oliveOil",
+    "basil"
+  ]
+},
+ "classicLasagna": {
+    "Display Name": "Classic Lasagna",
+    "Search Terms": [
+     "italian",
+     "pasta",
+     "lasagna",
+     "beef",
+     "lamb",
+     "bacon",
+     "cheese"
+  ],
+  "Breakfast": 0,
+  "Lunch": 1,
+  "Dinner": 1,
+  "Dessert": 0,
+  "Ingredients": [
+    "lasagnaSheets",
+    "parmesanCheese",
+    "garlic",
+    "salt",
+    "blackPepper",
+    "oliveOil",
+    "basil",
+    "eggs",
+    "onion",
+    "carrot",
+    "tomatoes",
+    "beef",
+    "bacon",
+    "lamb",
+    "mozzarellaCheese"
+  ]
+},
+
+  "italian bean soup": {
+     "Display Name": "Italian Bean Soup",
+     "Search Terms": [
+       "italian",
+       "soup",
+       "beans",
+       "ham",
+       "tomatoes"
+  ],
+  "Breakfast": 0,
+  "Lunch": 1,
+  "Dinner": 1,
+  "Dessert": 0,
+  "Ingredients": [
+      "ham",
+      "beef",
+      "garlic",
+      "salt",
+      "blackPepper",
+      "oliveOil",
+      "oregano",
+      "onion",
+      "carrot",
+      "tomatoes",
+      "potatoes",
+      "kidneyBeans",
+      "lentil",
+      "celery",
+      "redBellPepper"
+   ]
+  },
+
+   "irishStewPie": {
+    "Display Name": "Irish Stew Pie",
+    "Search Terms": [
+      "irish",
+      "stew",
+      "soup",
+      "pie",
+      "lamb",
+      "tomatoes"
+    ],
+      "Breakfast": 0,
+      "Lunch": 1,
+      "Dinner": 1,
+      "Dessert": 0,
+    "Ingredients": [
+       "pieCrust",
+       "lamb",
+       "garlic",
+       "salt",
+       "blackPepper",
+       "canolaOil",
+       "thyme",
+       "onion",
+       "carrot",
+       "tomatoes",
+       "potatoes",
+       "heavyCream",
+       "worcestershirSauce"
+  ]
+ },
+  "irishSheperdsPie": {
+  "Display Name": "Irish Sheperd's Pie",
+  "Search Terms": [
+     "irish",
+     "sheperd's",
+     "pie",
+     "lamb",
+     "tomatoes",
+     "potatoes"
+   ],
+     "Breakfast": 0,
+     "Lunch": 1,
+     "Dinner": 1,
+     "Dessert": 0,
+  "Ingredients": [
+     "butter",
+     "lamb",
+     "garlic",
+     "salt",
+     "blackPepper",
+     "cayennePepper",
+     "creamCheese",
+     "eggs",
+     "oliveOil",
+     "thyme",
+     "paprika",
+     "onion",
+     "carrot",
+     "tomatoes",
+     "potatoes",
+     "salt",
+     "milk",
+     "flour",
+     "bayLeaves"
+  ]
+},
+"irishCoddle": {
+  "Display Name": "Irish Coddle",
+  "Search Terms": [
+     "irish",
+     "coddle",
+     "soup",
+     "stew",
+     "sausage",
+     "bacon"
+   ],
+     "Breakfast": 0,
+     "Lunch": 1,
+     "Dinner": 1,
+     "Dessert": 0,
+  "Ingredients": [
+     "bacon",
+     "sausage",
+     "garlic",
+     "salt",
+     "blackPepper",
+     "parsley",
+     "thyme",
+     "bayLeaves",
+     "leek",
+     "onion",
+     "carrot",
+     "potatoes"
+  ]
+},
+"spanishCroquettes": {
+  "Display Name": "Spanish Croquettes",
+  "Search Terms": [
+     "spanish",
+     "croquettes",
+     "fried",
+     "creamy",
+     "ham"
+   ],
+     "Breakfast": 0,
+     "Lunch": 1,
+     "Dinner": 1,
+     "Dessert": 0,
+   "Ingredients": [
+      "ham",
+      "milk",
+      "garlic",
+      "salt",
+      "blackPepper",
+      "parsley",
+      "butter",
+      "flour",
+      "oliveOil",
+      "nutmeg",
+      "onion",
+      "eggs",
+      "whiteBread",
+      "paprika"
+  ]
+},
+
+"albondigasSpanishMeatball": {
+  "Display Name": "Albondigas Spanish Meatball",
+  "Search Terms": [
+     "spanish",
+     "meatball",
+     "fried",
+     "beef",
+     "pork"
+   ],
+     "Breakfast": 0,
+     "Lunch": 1,
+     "Dinner": 1,
+     "Dessert": 0,
+   "Ingredients": [
+      "whiteBread",
+      "milk",
+      "garlic",
+      "salt",
+      "blackPepper",
+      "parsley",
+      "oliveOil",
+      "onion",
+      "beef",
+      "paprika",
+      "pork",
+      "thyme",
+      "chiliFlakes",
+      "redWine",
+      "tomatoes",
+      "parmesanCheese"
+  ]
+}
+
 }
