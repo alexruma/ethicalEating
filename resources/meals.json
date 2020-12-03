@@ -1056,13 +1056,14 @@
   ]
 },
 
-"italian cannoli crepes": {
+"italianCannoliCrepes": {
   "Display Name": "Italian Cannoli Crepes",
   "Search Terms": [
     "italian",
     "crepe",
     "cannoli",
-    "sweet"
+    "sweet",
+    "italian cannoli crepes"
   ],
   "Breakfast": 0,
   "Lunch": 0,
@@ -1082,13 +1083,14 @@
   ]
 },
 
-"BomboloniDoughnut": {
+"bomboloniDoughnut": {
   "Display Name": "Bomboloni Doughnut",
   "Search Terms": [
     "italian",
     "sweet",
     "doughnut",
-    "Bomboloni"
+    "Bomboloni",
+    "bomboloni doughnut"
   ],
   "Breakfast": 0,
   "Lunch": 0,
@@ -1113,7 +1115,8 @@
     "spanish",
     "sweet",
     "cream",
-    "brulee"
+    "brulee",
+    "catalan cream"
   ],
   "Breakfast": 0,
   "Lunch": 0,
@@ -1135,7 +1138,8 @@
     "french",
     "sweet",
     "cake",
-    "buttercake"
+    "buttercake",
+    "madeleines butter cakes"
   ],
   "Breakfast": 0,
   "Lunch": 0,
