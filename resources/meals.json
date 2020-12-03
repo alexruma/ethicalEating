@@ -803,7 +803,7 @@
     "pasta",
     "pesto",
     "basil",
-    "parmesan"
+    "parmesan",
     "basil pesto",
     "basil pesto pasta"
   ],
@@ -1053,6 +1053,107 @@
       "redWine",
       "tomatoes",
       "parmesanCheese"
+  ]
+},
+
+"italianCannoliCrepes": {
+  "Display Name": "Italian Cannoli Crepes",
+  "Search Terms": [
+    "italian",
+    "crepe",
+    "cannoli",
+    "sweet",
+    "italian cannoli crepes"
+  ],
+  "Breakfast": 0,
+  "Lunch": 0,
+  "Dinner": 0,
+  "Dessert": 1,
+  "Ingredients": [
+    "flour",
+    "sugar",
+    "salt",
+    "heavyCream",
+    "eggs",
+    "milk",
+    "ricottaCheese",
+    "lemon",
+    "butter",
+    "pistachio"
+  ]
+},
+
+"bomboloniDoughnut": {
+  "Display Name": "Bomboloni Doughnut",
+  "Search Terms": [
+    "italian",
+    "sweet",
+    "doughnut",
+    "Bomboloni",
+    "bomboloni doughnut"
+  ],
+  "Breakfast": 0,
+  "Lunch": 0,
+  "Dinner": 0,
+  "Dessert": 1,
+  "Ingredients": [
+    "flour",
+    "sugar",
+    "salt",
+    "eggs",
+    "milk",
+    "lemon",
+    "butter",
+    "vegetableOil",
+    "vanilla"
+  ]
+},
+
+"catalanCream": {
+  "Display Name": "Catalan Cream",
+  "Search Terms": [
+    "spanish",
+    "sweet",
+    "cream",
+    "brulee",
+    "catalan cream"
+  ],
+  "Breakfast": 0,
+  "Lunch": 0,
+  "Dinner": 0,
+  "Dessert": 1,
+  "Ingredients": [
+    "sugar",
+    "eggs",
+    "milk",
+    "lemon",
+    "heavyCream",
+    "cinnamon"
+  ]
+},
+
+"madeleinesButterCakes": {
+  "Display Name": "Madeleines Butter Cakes",
+  "Search Terms": [
+    "french",
+    "sweet",
+    "cake",
+    "buttercake",
+    "madeleines butter cakes"
+  ],
+  "Breakfast": 0,
+  "Lunch": 0,
+  "Dinner": 0,
+  "Dessert": 1,
+  "Ingredients": [
+    "sugar",
+    "butter",
+    "honey",
+    "vanilla",
+    "flour",
+    "bakingPowder",
+    "eggs",
+    "salt"
   ]
 }
 
